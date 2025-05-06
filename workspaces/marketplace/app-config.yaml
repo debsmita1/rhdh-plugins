@@ -126,3 +126,5 @@ permission:
   enabled: true
 
 dangerouslyAllowSignInWithoutUserInCatalog: true
+marketplace:
+  dynamicPluginsConfig: ${DYNAMIC_PLUGINS_CONFIG}
