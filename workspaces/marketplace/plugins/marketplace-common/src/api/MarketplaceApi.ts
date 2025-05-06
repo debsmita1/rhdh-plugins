@@ -21,6 +21,8 @@ import {
 } from '@backstage/catalog-client';
 
 import {
+  DynamicPackageConfig,
+  DynamicPluginConfig,
   MarketplaceCollection,
   MarketplacePackage,
   MarketplacePlugin,
@@ -77,6 +79,11 @@ export interface MarketplaceApi {
     namespace: string,
     name: string,
   ): Promise<MarketplacePackage>;
+
+  getPackageConfigByName?(
+    namespace: string,
+    name: string,
+  ): Promise<DynamicPackageConfig>;
 
   getPlugins(
     request: GetEntitiesRequest,
