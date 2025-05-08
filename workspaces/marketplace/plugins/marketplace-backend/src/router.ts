@@ -356,7 +356,7 @@ export async function createRouter(
       }
       throw e;
     }
-    res.status(200).json({ status: 'OK' });
+    // res.status(200).json({ status: 'OK' });
   });
 
   router.get('/plugin/:namespace/:name/packages', async (req, res) => {
