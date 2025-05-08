@@ -41,6 +41,7 @@ import { MarketplacePluginInstallPage } from './MarketplacePluginInstallPage';
 
 // import { MarketplacePackagesTable } from '../components/MarketplacePackagesTable';
 import { MarketplacePackageDrawer } from '../components/MarketplacePackageDrawer';
+import { PluginsContextProvider } from '../components/PluginsContextProvider';
 import { MarketplacePackageInstallPage } from './MarketplacePackageInstallPage';
 
 export interface PluginTab {
@@ -134,21 +135,23 @@ const Tabs = () => {
 
 export const DynamicMarketplacePluginRouter = () => (
   <ReactQueryProvider>
-    <Routes>
-      <Route
-        path="/collections/:namespace/:name"
-        Component={MarketplaceCollectionPage}
-      />
-      <Route
-        path="/plugins/:namespace/:name/install"
-        Component={MarketplacePluginInstallPage}
-      />
-      <Route
-        path="/packages/:namespace/:name/install"
-        Component={MarketplacePackageInstallPage}
-      />
-      <Route path="/*" Component={Tabs} />
-    </Routes>
+    <PluginsContextProvider>
+      <Routes>
+        <Route
+          path="/collections/:namespace/:name"
+          Component={MarketplaceCollectionPage}
+        />
+        <Route
+          path="/plugins/:namespace/:name/install"
+          Component={MarketplacePluginInstallPage}
+        />
+        <Route
+          path="/packages/:namespace/:name/install"
+          Component={MarketplacePackageInstallPage}
+        />
+        <Route path="/*" Component={Tabs} />
+      </Routes>
+    </PluginsContextProvider>
   </ReactQueryProvider>
 );
 

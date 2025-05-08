@@ -23,6 +23,8 @@ import Card from '@mui/material/Card';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
+import AlertTitle from '@mui/material/AlertTitle';
+import Alert from '@mui/material/Alert';
 
 import { SearchTextField } from '../shared-components/SearchTextField';
 
@@ -33,6 +35,7 @@ import { MarketplacePluginFilter } from './MarketplacePluginFilter';
 import { CollectionHorizontalScrollRow } from './CollectionHorizontalScrollRow';
 
 import notFoundImag from '../assets/notfound.png';
+import { usePluginsContext } from './PluginsContextProvider';
 
 const NoPluginsFound = () => (
   <Content>
@@ -70,6 +73,18 @@ const NoPluginsFound = () => (
   </Content>
 );
 
+const PluginsAlert = () => {
+  const { plugins } = usePluginsContext();
+  return (
+    plugins.length > 0 && (
+      <Alert severity="info" sx={{ mb: '1rem' }}>
+        <AlertTitle>Backend restart required</AlertTitle>Restart your back-end
+        system to finish installing.
+      </Alert>
+    )
+  );
+};
+
 export const MarketplaceCatalogContent = () => {
   const featuredCollections = useCollections({
     filter: {
@@ -100,6 +115,7 @@ export const MarketplaceCatalogContent = () => {
         <MarketplacePluginFilter />
       </CatalogFilterLayout.Filters>
       <CatalogFilterLayout.Content>
+        <PluginsAlert />
         <Stack direction="column" gap={3}>
           {featuredCollections.data?.items?.map(collection => (
             <CollectionHorizontalScrollRow
