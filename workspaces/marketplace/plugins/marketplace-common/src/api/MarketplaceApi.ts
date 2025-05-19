@@ -100,7 +100,10 @@ export interface MarketplaceApi {
 
   installPlugin?(namespace: string, name: string): Promise<{ status: any }>;
 
-  getPluginConfigByName?(namespace: string, name: string): Promise<string>;
+  getPluginConfigByName?(
+    namespace: string,
+    name: string,
+  ): Promise<{ configYaml: string }>;
 
   getPluginPackages(
     namespace: string,
