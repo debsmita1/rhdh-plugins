@@ -52,9 +52,19 @@ export type FetchApi = {
 /**
  * @public
  */
+export type IdentityApi = {
+  getCredentials(): Promise<{
+    token?: string;
+  }>;
+};
+
+/**
+ * @public
+ */
 export type MarketplaceBackendClientOptions = {
   discoveryApi: DiscoveryApi;
   fetchApi: FetchApi;
+  identityApi: IdentityApi;
 };
 
 /**
@@ -63,10 +73,12 @@ export type MarketplaceBackendClientOptions = {
 export class MarketplaceBackendClient implements MarketplaceApi {
   private readonly discoveryApi: DiscoveryApi;
   private readonly fetchApi: FetchApi;
+  private readonly identityApi: IdentityApi;
 
   constructor(options: MarketplaceBackendClientOptions) {
     this.discoveryApi = options.discoveryApi;
     this.fetchApi = options.fetchApi;
+    this.identityApi = options.identityApi;
   }
 
   private async request(
@@ -74,21 +86,26 @@ export class MarketplaceBackendClient implements MarketplaceApi {
     requestType: 'GET' | 'POST',
     searchParams?: URLSearchParams,
   ): Promise<any> {
+    const { token: idToken } = await this.identityApi.getCredentials();
     const baseUrl = await this.discoveryApi.getBaseUrl('extensions');
     const query = searchParams ? searchParams.toString() : '';
     const url = `${baseUrl}${path}${query ? '?' : ''}${query}`;
 
     const response = await this.fetchApi.fetch(url, {
-      method: requestType,
       headers: {
+        method: requestType,
         'Content-Type': 'application/json',
+        ...(idToken && { Authorization: `Bearer ${idToken}` }),
       },
     });
-    if (!response.ok) {
-      throw new Error(
-        `Unexpected status code: ${response.status} ${response.statusText}`,
-      );
-    }
+    // if (!response.ok) {
+    //   const error = await response.json();
+    //   return error;
+    //   // throw new Error(
+    //   //   error?.error?.message ??
+    //   //     `Unexpected status code: ${response.status} ${response.statusText}`,
+    //   // );
+    // }
 
     return response.json();
   }
@@ -162,9 +179,10 @@ export class MarketplaceBackendClient implements MarketplaceApi {
   async getPackageConfigByName(
     namespace: string,
     name: string,
-  ): Promise<{configYaml: string}> {
+  ): Promise<{ configYaml: string }> {
     return this.request(
-      `/package/${encodeURIComponent(namespace)}/${encodeURIComponent(name)}/configuration`, 'GET'
+      `/package/${encodeURIComponent(namespace)}/${encodeURIComponent(name)}/configuration`,
+      'GET',
     );
   }
 

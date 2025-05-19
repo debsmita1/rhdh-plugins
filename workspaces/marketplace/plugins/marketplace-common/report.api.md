@@ -126,6 +126,13 @@ export interface GetEntitiesResponse<T> {
 }
 
 // @public (undocumented)
+export type IdentityApi = {
+    getCredentials(): Promise<{
+        token?: string;
+    }>;
+};
+
+// @public (undocumented)
 export function isMarketplaceCollection(entity?: Entity): entity is MarketplaceCollection;
 
 // @public (undocumented)
@@ -176,7 +183,7 @@ export interface MarketplaceApi {
     // (undocumented)
     getPluginConfigByName?(namespace: string, name: string): Promise<{
         configYaml: string;
-    }>;
+    } | Error>;
     // (undocumented)
     getPluginFacets(request: GetEntityFacetsRequest): Promise<GetEntityFacetsResponse>;
     // (undocumented)
@@ -226,7 +233,7 @@ export class MarketplaceBackendClient implements MarketplaceApi {
     // (undocumented)
     getPluginConfigByName(namespace: string, name: string): Promise<{
         configYaml: string;
-    }>;
+    } | Error>;
     // (undocumented)
     getPluginFacets(request: GetEntityFacetsRequest): Promise<GetEntityFacetsResponse>;
     // (undocumented)
@@ -243,6 +250,7 @@ export class MarketplaceBackendClient implements MarketplaceApi {
 export type MarketplaceBackendClientOptions = {
     discoveryApi: DiscoveryApi;
     fetchApi: FetchApi;
+    identityApi: IdentityApi;
 };
 
 // @public (undocumented)
