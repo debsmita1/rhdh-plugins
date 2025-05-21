@@ -78,7 +78,10 @@ export interface MarketplaceApi {
     name: string,
   ): Promise<MarketplacePackage>;
 
-  getPackageConfigByName?(namespace: string, name: string): Promise<{configYaml:string}>;
+  getPackageConfigByName?(
+    namespace: string,
+    name: string,
+  ): Promise<{ configYaml: string }>;
 
   getPlugins(
     request: GetEntitiesRequest,
