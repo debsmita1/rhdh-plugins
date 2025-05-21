@@ -162,7 +162,7 @@ export class MarketplaceBackendClient implements MarketplaceApi {
   async getPackageConfigByName(
     namespace: string,
     name: string,
-  ): Promise<string> {
+  ): Promise<{ configYaml: string }> {
     return this.request(
       `/package/${encodeURIComponent(namespace)}/${encodeURIComponent(name)}/configuration`, 'GET'
     );
