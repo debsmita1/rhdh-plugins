@@ -95,7 +95,6 @@ export class MarketplaceBackendClient implements MarketplaceApi {
 
     const options: RequestInit = {
       method: requestType,
-
       headers: {
         'Content-Type': 'application/json',
         ...(idToken && { Authorization: `Bearer ${idToken}` }),
@@ -253,8 +252,8 @@ export class MarketplaceBackendClient implements MarketplaceApi {
   async installPlugin(
     namespace: string,
     name: string,
-    configYaml: string,
-  ): Promise<{ status: any }> {
+    configYaml: {configYaml: string},
+  ): Promise<{ status: string }> {
     return this.request(
       `/plugin/${encodeURIComponent(namespace)}/${encodeURIComponent(name)}/configuration`,
       'POST',

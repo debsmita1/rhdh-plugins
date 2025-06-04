@@ -35,6 +35,7 @@ import {
   MarketplacePlugin,
 } from '@red-hat-developer-hub/backstage-plugin-marketplace-common';
 
+import CircularProgress from '@mui/material/CircularProgress';
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Card from '@mui/material/Card';
@@ -198,6 +199,7 @@ export const MarketplacePluginInstallContent = ({
   const marketplaceApi = useMarketplaceApi();
   const navigate = useNavigate();
   const [showErrorAlert, setShowErrorAlert] = React.useState(false);
+  const [isSubmitting, setIsSubmitting] = React.useState(false);
   const [hasGlobalHeader, setHasGlobalHeader] = useState(false);
   const pluginConfig = usePluginConfig(params.namespace, params.name);
 
@@ -216,6 +218,10 @@ export const MarketplacePluginInstallContent = ({
     namespace: params.namespace,
     name: params.name,
   });
+
+  const onReset = React.useCallback(() => {
+    pluginConfig.refetch();
+  }, [pluginConfig]);
 
   const onLoaded = React.useCallback(() => {
     setShowErrorAlert(false);
@@ -280,14 +286,25 @@ export const MarketplacePluginInstallContent = ({
   };
 
   const handleInstall = async () => {
+    setIsSubmitting(true);
+    const content = yaml.parseDocument(codeEditor.getValue() ?? '');
+    const pluginsArray = content.get('plugins');
+
+    const pluginsYaml = new yaml.Document(pluginsArray);
+    const pluginsYamlString = pluginsYaml.toString();
     try {
       const res = await marketplaceApi.installPlugin?.(
         params.namespace,
         params.name,
+        {
+          configYaml: pluginsYamlString,
+        },
       );
+      console.log('!!!!res ', res);
       if (res?.status === 'OK') {
         navigate('/extensions');
       } else {
+        setIsSubmitting(false);
         setShowErrorAlert(true);
       }
     } catch (err) {
@@ -301,7 +318,8 @@ export const MarketplacePluginInstallContent = ({
     isProductionEnvironment ||
     showErrorAlert ||
     pluginConfigPermissions.data?.write !== 'ALLOW' ||
-    (pluginConfig.data as any)?.error;
+    (pluginConfig.data as any)?.error ||
+    isSubmitting;
 
   const installTooltip = () => {
     if (isProductionEnvironment) {
@@ -479,6 +497,9 @@ export const MarketplacePluginInstallContent = ({
               color="primary"
               onClick={handleInstall}
               disabled={showDisableInstall}
+              startIcon={
+                isSubmitting && <CircularProgress size="20px" color="inherit" />
+              }
             >
               Install
             </Button>
@@ -497,7 +518,7 @@ export const MarketplacePluginInstallContent = ({
           <Button
             variant="text"
             color="primary"
-            onClick={onLoaded}
+            onClick={onReset}
             sx={{ ml: 3 }}
           >
             Reset

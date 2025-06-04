@@ -105,8 +105,6 @@ export interface MarketplaceApi {
     name: string,
   ): Promise<{ read: 'ALLOW' | 'DENY'; write: 'ALLOW' | 'DENY' }>;
 
-  installPlugin?(namespace: string, name: string): Promise<{ status: any }>;
-
   getPluginConfigByName?(
     namespace: string,
     name: string,
@@ -115,7 +113,7 @@ export interface MarketplaceApi {
   installPlugin?(
     namespace: string,
     name: string,
-    configYaml: string,
+    configYaml: {configYaml: string},
   ): Promise<{ status: string }>;
 
   getPluginPackages(
