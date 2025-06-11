@@ -72,7 +72,7 @@ export class MarketplaceBackendClient implements MarketplaceApi {
 
   private async request(
     path: string,
-    requestType: 'GET' | 'POST',
+    requestType: 'GET' | 'POST' | 'PATCH',
     searchParams?: URLSearchParams,
     body?: any,
   ): Promise<any> {
@@ -189,6 +189,19 @@ export class MarketplaceBackendClient implements MarketplaceApi {
     );
   }
 
+  async disablePackage(
+    namespace: string,
+    name: string,
+    disabled: boolean,
+  ): Promise<{ status: string }> {
+    return this.request(
+      `/package/${encodeURIComponent(namespace)}/${encodeURIComponent(name)}/configuration/disable`,
+      'POST',
+      undefined,
+      { disabled },
+    );
+  }
+
   async getPlugins(
     request: GetEntitiesRequest,
   ): Promise<GetEntitiesResponse<MarketplacePlugin>> {
@@ -255,7 +268,7 @@ export class MarketplaceBackendClient implements MarketplaceApi {
   ): Promise<{ status: string }> {
     return this.request(
       `/plugin/${encodeURIComponent(namespace)}/${encodeURIComponent(name)}/configuration/disable`,
-      'POST',
+      'PATCH',
       undefined,
       { disabled },
     );

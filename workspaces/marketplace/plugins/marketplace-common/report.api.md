@@ -154,6 +154,10 @@ export enum MarketplaceAnnotation {
 // @public (undocumented)
 export interface MarketplaceApi {
     // (undocumented)
+    disablePackage?(namespace: string, name: string, disabled: boolean): Promise<{
+        status: string;
+    }>;
+    // (undocumented)
     disablePlugin?(namespace: string, name: string, disabled: boolean): Promise<{
         status: string;
     }>;
@@ -207,6 +211,10 @@ export type MarketplaceAuthor = {
 // @public (undocumented)
 export class MarketplaceBackendClient implements MarketplaceApi {
     constructor(options: MarketplaceBackendClientOptions);
+    // (undocumented)
+    disablePackage(namespace: string, name: string, disabled: boolean): Promise<{
+        status: string;
+    }>;
     // (undocumented)
     disablePlugin(namespace: string, name: string, disabled: boolean): Promise<{
         status: string;
