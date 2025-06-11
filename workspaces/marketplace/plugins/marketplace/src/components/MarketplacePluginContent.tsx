@@ -63,6 +63,7 @@ import { Markdown } from './Markdown';
 import { usePluginPackages } from '../hooks/usePluginPackages';
 import { usePluginConfigurationPermissions } from '../hooks/usePluginConfigurationPermissions';
 import { Links } from './Links';
+import { useEnablePlugin } from '../hooks/useEnablePlugin';
 
 export const MarketplacePluginContentSkeleton = () => {
   return (
@@ -220,6 +221,7 @@ export const MarketplacePluginContent = ({
     params.namespace,
     params.name,
   );
+  const { mutateAsync: enablePlugin } = useEnablePlugin();
 
   const handleClose = () => {
     setAnchorEl(null);
@@ -234,9 +236,21 @@ export const MarketplacePluginContent = ({
     });
   };
 
-  const handleToggle = () => {
-    setIsPluginEnabled(isEnabled => !isEnabled);
+  const handleToggle = async (checked: boolean) => {
+    setIsPluginEnabled(checked);
     // Make the appropriate API call to perform the enable/disable action
+    try {
+      const res = await enablePlugin({
+        namespace: plugin.metadata.namespace ?? 'default',
+        name: plugin.metadata.name,
+        disabled: !checked,
+      });
+      if (res?.status !== 'OK') {
+        console.log((res as any)?.error?.message);
+      } 
+    } catch (err: any) {
+      console.log(err?.error?.message);
+    }
   };
 
   const withFilter = (name: string, value: string) =>
@@ -315,7 +329,7 @@ export const MarketplacePluginContent = ({
                   size="small"
                   checked={isPluginEnabled}
                   disableRipple
-                  onChange={handleToggle}
+                  onChange={(_event, checked) => handleToggle(checked)}
                   inputProps={{
                     'aria-label': isPluginEnabled
                       ? 'disable-plugin'
