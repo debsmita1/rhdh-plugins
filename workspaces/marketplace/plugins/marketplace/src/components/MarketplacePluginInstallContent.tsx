@@ -81,6 +81,7 @@ import { usePluginConfig } from '../hooks/usePluginConfig';
 import { useInstallPlugin } from '../hooks/useInstallPlugin';
 import { useNodeEnvironment } from '../hooks/useNodeEnvironment';
 import { useExtensionsConfiguration } from '../hooks/useExtensionsConfiguration';
+import { useInstallationContext } from './InstallationContext';
 
 const generateCheckboxList = (packages: MarketplacePackage[]) => {
   const hasFrontend = packages.some(
@@ -211,6 +212,7 @@ export const MarketplacePluginInstallContent = ({
   packages: MarketplacePackage[];
 }) => {
   const { mutateAsync: installPlugin } = useInstallPlugin();
+  const { setInstalledPlugin } = useInstallationContext();
   const params = useRouteRefParams(pluginInstallRouteRef);
   const [isSubmitting, setIsSubmitting] = React.useState(false);
   const navigate = useNavigate();
@@ -322,6 +324,7 @@ export const MarketplacePluginInstallContent = ({
         configYaml: pluginsYamlString,
       });
       if (res?.status === 'OK') {
+        setInstalledPlugin(plugin.metadata?.title ?? plugin.metadata.name);
         navigate('/extensions');
       } else {
         setIsSubmitting(false);

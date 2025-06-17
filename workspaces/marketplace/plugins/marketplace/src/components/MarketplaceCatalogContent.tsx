@@ -47,6 +47,10 @@ import {
   EXTENSIONS_CONFIG_YAML,
   generateExtensionsEnableLineNumbers,
 } from '../utils';
+import {
+  InstallationContextProvider,
+  useInstallationContext,
+} from './InstallationContext';
 
 const EmptyState = ({ isError }: { isError?: boolean }) => (
   <Content>
@@ -100,15 +104,15 @@ const EmptyState = ({ isError }: { isError?: boolean }) => (
   </Content>
 );
 
-export const MarketplaceCatalogContent = () => {
+export const MarketplaceCatalogPlugins = () => {
   const extensionsConfig = useExtensionsConfiguration();
+  const { installedPlugin } = useInstallationContext();
   const nodeEnvironment = useNodeEnvironment();
   const featuredCollections = useCollections({
     filter: {
       'metadata.name': 'featured',
     },
   });
-
   const filteredPlugins = useFilteredPlugins();
 
   let title = 'Plugins';
@@ -166,6 +170,12 @@ export const MarketplaceCatalogContent = () => {
           <br />
         </>
       )}
+      {installedPlugin && (
+        <Alert severity="info" sx={{ mb: '1rem' }}>
+          <AlertTitle>Backend restart required</AlertTitle>
+          {`You have plugin ${installedPlugin} that require a restart of your back-end system to finish installing.`}
+        </Alert>
+      )}
       <CatalogFilterLayout>
         <CatalogFilterLayout.Filters>
           <MarketplacePluginFilter />
@@ -197,5 +207,13 @@ export const MarketplaceCatalogContent = () => {
         </CatalogFilterLayout.Content>
       </CatalogFilterLayout>
     </>
+  );
+};
+
+export const MarketplaceCatalogContent = () => {
+  return (
+    <InstallationContextProvider>
+      <MarketplaceCatalogPlugins />
+    </InstallationContextProvider>
   );
 };
