@@ -25,6 +25,8 @@ import {
 } from '@backstage/core-components';
 
 import { useScalprum } from '@scalprum/react-core';
+import CategoryIcon from '@mui/icons-material/CategoryOutlined';
+import Typography from '@mui/material/Typography';
 
 import { themeId } from '../consts';
 
@@ -91,7 +93,21 @@ const Tabs = () => {
             <TabbedLayout.Route
               key={config.path}
               path={config.path}
-              title={config.title}
+              title=""
+              tabProps={{
+                icon: (
+                  <Typography
+                    component="span"
+                    style={{
+                      display: 'inline-flex',
+                      alignItems: 'center',
+                      gap: '4px',
+                    }}
+                  >
+                    <CategoryIcon /> {config.title}
+                  </Typography>
+                ),
+              }}
             >
               <ErrorBoundary>
                 <Component />
