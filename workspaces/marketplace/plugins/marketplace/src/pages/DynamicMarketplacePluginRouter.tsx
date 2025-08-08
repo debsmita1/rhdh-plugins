@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import type { ComponentType } from 'react';
+import { type ComponentType } from 'react';
 import { Routes, Route } from 'react-router-dom';
 
 import {
@@ -25,7 +25,7 @@ import {
 } from '@backstage/core-components';
 
 import { useScalprum } from '@scalprum/react-core';
-import CategoryIcon from '@mui/icons-material/CategoryOutlined';
+import CategoryOutlinedIcon from '@mui/icons-material/CategoryOutlined';
 import Typography from '@mui/material/Typography';
 
 import { themeId } from '../consts';
@@ -44,12 +44,14 @@ import { MarketplacePluginInstallPage } from './MarketplacePluginInstallPage';
 // import { MarketplacePackagesTable } from '../components/MarketplacePackagesTable';
 import { MarketplacePackageDrawer } from '../components/MarketplacePackageDrawer';
 import { MarketplacePackageInstallPage } from './MarketplacePackageInstallPage';
+import { TabPanelIcon } from '../shared-components/TabPanelIcon';
 
 export interface PluginTab {
   Component: ComponentType;
   config: {
     path: string;
     title: string;
+    icon: string | React.ReactElement;
   };
 }
 
@@ -74,6 +76,7 @@ const Tabs = () => {
       config: {
         path: '',
         title: 'Catalog',
+        icon: <CategoryOutlinedIcon />,
       },
     },
   ];
@@ -89,31 +92,38 @@ const Tabs = () => {
             </ErrorBoundary>
           </TabbedLayout.Route> */}
 
-          {tabs.map(({ Component, config }) => (
-            <TabbedLayout.Route
-              key={config.path}
-              path={config.path}
-              title=""
-              tabProps={{
-                icon: (
-                  <Typography
-                    component="span"
-                    style={{
-                      display: 'inline-flex',
-                      alignItems: 'center',
-                      gap: '4px',
-                    }}
-                  >
-                    <CategoryIcon /> {config.title}
-                  </Typography>
-                ),
-              }}
-            >
-              <ErrorBoundary>
-                <Component />
-              </ErrorBoundary>
-            </TabbedLayout.Route>
-          ))}
+          {tabs.map(({ Component, config }) => {
+            const tabIcon = <TabPanelIcon icon={config.icon} />;
+            return (
+              <TabbedLayout.Route
+                key={config.path}
+                path={config.path}
+                title={tabIcon ? '' : config.title}
+                tabProps={
+                  tabIcon
+                    ? {
+                        icon: (
+                          <Typography
+                            component="span"
+                            style={{
+                              display: 'inline-flex',
+                              alignItems: 'center',
+                              gap: '4px',
+                            }}
+                          >
+                            {tabIcon} {config.title}
+                          </Typography>
+                        ),
+                      }
+                    : {}
+                }
+              >
+                <ErrorBoundary>
+                  <Component />
+                </ErrorBoundary>
+              </TabbedLayout.Route>
+            );
+          })}
 
           {/*       
           <TabbedLayout.Route path="/collections" title="Collections">
