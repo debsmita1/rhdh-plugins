@@ -566,10 +566,18 @@ export const MarketplacePluginContentLoader = () => {
 
   if (plugin.isLoading) {
     return <MarketplacePluginContentSkeleton />;
+  } else if (plugin.error || plugin.data?.error) {
+    return (
+      <ErrorPage
+        statusMessage={
+          plugin.error
+            ? plugin.error.toString()
+            : `Plugin ${params.name} not found!`
+        }
+      />
+    );
   } else if (plugin.data) {
     return <MarketplacePluginContent plugin={plugin.data} />;
-  } else if (plugin.error) {
-    return <ErrorPage statusMessage={plugin.error.toString()} />;
   }
   return <ErrorPage statusMessage={`Plugin ${params.name} not found!`} />;
 };
