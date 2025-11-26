@@ -19,7 +19,9 @@ import { Ref, useMemo, useState } from 'react';
 import { createStyles, makeStyles } from '@material-ui/core';
 import ToggleOffOutlinedIcon from '@mui/icons-material/ToggleOffOutlined';
 import ToggleOnOutlinedIcon from '@mui/icons-material/ToggleOnOutlined';
+import Divider from '@mui/material/Divider';
 import {
+  ChatbotDisplayMode,
   ChatbotHeaderActions,
   ChatbotHeaderOptionsDropdown,
 } from '@patternfly/chatbot';
@@ -32,6 +34,11 @@ import {
   MenuToggle,
   MenuToggleElement,
 } from '@patternfly/react-core';
+import {
+  ExpandIcon,
+  OpenDrawerRightIcon,
+  OutlinedWindowRestoreIcon,
+} from '@patternfly/react-icons';
 
 import { useTranslation } from '../hooks/useTranslation';
 
@@ -41,6 +48,7 @@ type LightspeedChatBoxHeaderProps = {
   models: { label: string; value: string; provider: string }[];
   isPinningChatsEnabled: boolean;
   onPinnedChatsToggle: (state: boolean) => void;
+  setDisplayMode: (mode: ChatbotDisplayMode) => void;
 };
 
 const useStyles = makeStyles(() =>
@@ -68,6 +76,7 @@ export const LightspeedChatBoxHeader = ({
   models,
   isPinningChatsEnabled,
   onPinnedChatsToggle,
+  setDisplayMode,
 }: LightspeedChatBoxHeaderProps) => {
   const [isOptionsMenuOpen, setIsOptionsMenuOpen] = useState(false);
   const { t } = useTranslation();
@@ -105,6 +114,18 @@ export const LightspeedChatBoxHeader = ({
 
   const handlePinningChatsToggle = (state: boolean) => {
     onPinnedChatsToggle(state);
+  };
+
+  const handleDockedToWindow = () => {
+    setDisplayMode(ChatbotDisplayMode.docked);
+  };
+
+  const handleFullscreen = () => {
+    setDisplayMode(ChatbotDisplayMode.embedded);
+  };
+
+  const handleOverlay = () => {
+    setDisplayMode(ChatbotDisplayMode.default);
   };
 
   return (
@@ -156,6 +177,38 @@ export const LightspeedChatBoxHeader = ({
           content: t('tooltip.settings'),
         }}
       >
+        <DropdownGroup>
+          <DropdownList>
+            <DropdownItem key="displayModeLabel" isDisabled>
+              Display mode
+            </DropdownItem>
+            <DropdownItem
+              value={ChatbotDisplayMode.default}
+              key="switchDisplayOverlay"
+              icon={<OutlinedWindowRestoreIcon />}
+              onClick={handleOverlay}
+            >
+              Overlay
+            </DropdownItem>
+            <DropdownItem
+              value={ChatbotDisplayMode.docked}
+              key="switchDisplayDock"
+              icon={<OpenDrawerRightIcon />}
+              onClick={handleDockedToWindow}
+            >
+              Dock to window
+            </DropdownItem>
+            <DropdownItem
+              value={ChatbotDisplayMode.embedded}
+              key="switchDisplayFullscreen"
+              icon={<ExpandIcon />}
+              onClick={handleFullscreen}
+            >
+              Fullscreen
+            </DropdownItem>
+          </DropdownList>
+        </DropdownGroup>
+        <Divider />
         <DropdownGroup>
           <DropdownList>
             {isPinningChatsEnabled ? (

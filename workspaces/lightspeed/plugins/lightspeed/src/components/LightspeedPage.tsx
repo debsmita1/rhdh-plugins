@@ -30,6 +30,7 @@ import { useTranslation } from '../hooks/useTranslation';
 import queryClient from '../utils/queryClient';
 import FileAttachmentContextProvider from './AttachmentContext';
 import { LightspeedChat } from './LightSpeedChat';
+import { LightspeedDrawerProvider } from './LightspeedDrawerProvider';
 import PermissionRequiredState from './PermissionRequiredState';
 
 const useStyles = makeStyles(() =>
@@ -158,24 +159,26 @@ const LightspeedPageInner = () => {
         {!hasViewAccess ? (
           <PermissionRequiredState />
         ) : (
-          <FileAttachmentContextProvider>
-            <LightspeedChat
-              selectedModel={selectedModel}
-              selectedProvider={selectedProvider}
-              topicRestrictionEnabled={topicRestrictionEnabled ?? false}
-              handleSelectedModel={item => {
-                setSelectedModel(item);
-                setSelectedProvider(
-                  modelsItems.find((m: any) => m.value === item)?.provider ||
-                    '',
-                );
-              }}
-              models={modelsItems}
-              userName={profile?.displayName}
-              avatar={profile?.picture}
-              profileLoading={profileLoading}
-            />
-          </FileAttachmentContextProvider>
+          <LightspeedDrawerProvider>
+            <FileAttachmentContextProvider>
+              <LightspeedChat
+                selectedModel={selectedModel}
+                selectedProvider={selectedProvider}
+                topicRestrictionEnabled={topicRestrictionEnabled ?? false}
+                handleSelectedModel={item => {
+                  setSelectedModel(item);
+                  setSelectedProvider(
+                    modelsItems.find((m: any) => m.value === item)?.provider ||
+                      '',
+                  );
+                }}
+                models={modelsItems}
+                userName={profile?.displayName}
+                avatar={profile?.picture}
+                profileLoading={profileLoading}
+              />
+            </FileAttachmentContextProvider>
+          </LightspeedDrawerProvider>
         )}
       </Content>
     </Page>
