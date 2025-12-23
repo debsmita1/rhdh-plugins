@@ -42,6 +42,7 @@ export const LightspeedFABIcon = () => {
 
   return (
     <img
+      data-testid="lightspeed-fab-icon"
       src={roundedLogo as any}
       alt={t('icon.lightspeed.alt')}
       style={{
