@@ -354,6 +354,12 @@ test.describe('Lightspeed tests', () => {
       await sendMessage('test', sharedPage, translations);
       const sidePanel = sharedPage.locator('.pf-v6-c-drawer__panel-main');
 
+      // Ensure the drawer is open before checking the side panel
+      if (!(await sidePanel.isVisible())) {
+        await openChatDrawer(sharedPage, translations);
+      }
+      await expect(sidePanel).toBeVisible();
+
       const currentChat = sidePanel.locator('li.pf-chatbot__menu-item--active');
       await expect(currentChat).toHaveText(
         devMode ? moreConversations[0].topic_summary : /<[\w\s]+topic[\w\s]*>/,
