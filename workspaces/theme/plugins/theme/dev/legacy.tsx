@@ -14,4 +14,15 @@
  * limitations under the License.
  */
 
-export { Root } from './Root';
+import { createDevApp } from '@backstage/dev-utils';
+import { getAllThemes } from '../src';
+import { ThemeTestPage } from './ThemeTestPage';
+
+createDevApp()
+  .addThemes(getAllThemes())
+  .addPage({
+    element: <ThemeTestPage />,
+    title: 'Test page',
+    path: '/',
+  })
+  .render();

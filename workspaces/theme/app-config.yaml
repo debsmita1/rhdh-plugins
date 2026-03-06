@@ -6,6 +6,8 @@ app:
 
   extensions:
     - nav-item:user-settings: false
+    - nav-item:api-docs: false
+    - nav-item:search: false
 
 organization:
   name: My Company

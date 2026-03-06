@@ -14,10 +14,4 @@
  * limitations under the License.
  */
 
-import { createApp } from '@backstage/frontend-defaults';
-import { navModule } from './modules';
-import { rhdhThemeModule } from '@red-hat-developer-hub/backstage-plugin-theme/alpha';
-
-export default createApp({
-  features: [navModule, rhdhThemeModule],
-});
+import '@testing-library/jest-dom';
