@@ -21,7 +21,8 @@ const appMode = process.env.APP_MODE || 'legacy';
 const startCommand = appMode === 'legacy' ? 'yarn start:legacy' : 'yarn start';
 
 export default defineConfig({
-  timeout: 10 * 1000,
+  // E2E tests run full app + login + locale; beforeAll can take 30–60s
+  timeout: 120 * 1000,
 
   expect: {
     timeout: 5000,
@@ -47,12 +48,13 @@ export default defineConfig({
     permissions: ['clipboard-read', 'clipboard-write'],
   },
 
-  outputDir: 'node_modules/.cache/e2e-test-results',
+  outputDir: `node_modules/.cache/e2e-test-results-${appMode}`,
+
+  testDir: 'packages/app/e2e-tests',
 
   projects: [
     {
       name: 'en',
-      testDir: 'packages/app/e2e-tests',
       use: {
         channel: 'chrome',
         locale: 'en',
@@ -60,7 +62,6 @@ export default defineConfig({
     },
     {
       name: 'fr',
-      testDir: 'packages/app/e2e-tests',
       grep: /Cards/,
       use: {
         channel: 'chrome',
@@ -69,7 +70,6 @@ export default defineConfig({
     },
     {
       name: 'it',
-      testDir: 'packages/app/e2e-tests',
       grep: /Cards/,
       use: {
         channel: 'chrome',
@@ -78,7 +78,6 @@ export default defineConfig({
     },
     {
       name: 'ja',
-      testDir: 'packages/app/e2e-tests',
       grep: /Cards/,
       use: {
         channel: 'chrome',
