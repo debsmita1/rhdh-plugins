@@ -35,7 +35,8 @@ test.describe('Homepage Card Individual Tests', () => {
     const currentLocale = await sharedPage.evaluate(
       () => globalThis.navigator.language,
     );
-    await testUtils.loginAsGuest();
+    const loginUrl = process.env.APP_MODE === 'nfs' ? '/' : '/customizable';
+    await testUtils.loginAsGuest(loginUrl);
     await testUtils.switchToLocale(currentLocale);
     translations = getTranslations(currentLocale);
   });

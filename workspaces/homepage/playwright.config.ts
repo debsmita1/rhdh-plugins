@@ -16,13 +16,13 @@
 
 import { defineConfig } from '@playwright/test';
 
+const LOCALES = ['en', 'de', 'es', 'fr', 'it', 'ja'] as const;
 // APP_MODE: 'legacy' (app-legacy) or 'nfs' (app with new frontend system)
 const appMode = process.env.APP_MODE || 'legacy';
 const startCommand = appMode === 'legacy' ? 'yarn start:legacy' : 'yarn start';
 
 export default defineConfig({
-  // E2E tests run full app + login + locale; beforeAll can take 30–60s
-  timeout: 120 * 1000,
+  timeout: 2 * 60 * 1000,
 
   expect: {
     timeout: 5000,
@@ -56,33 +56,17 @@ export default defineConfig({
     {
       name: 'en',
       use: {
-        channel: 'chrome',
+        channel: 'chrome' as const,
         locale: 'en',
       },
     },
-    {
-      name: 'fr',
+    ...LOCALES.filter(locale => locale !== 'en').map(locale => ({
+      name: locale,
       grep: /Cards/,
       use: {
-        channel: 'chrome',
-        locale: 'fr',
+        channel: 'chrome' as const,
+        locale,
       },
-    },
-    {
-      name: 'it',
-      grep: /Cards/,
-      use: {
-        channel: 'chrome',
-        locale: 'it',
-      },
-    },
-    {
-      name: 'ja',
-      grep: /Cards/,
-      use: {
-        channel: 'chrome',
-        locale: 'ja',
-      },
-    },
+    })),
   ],
 });
