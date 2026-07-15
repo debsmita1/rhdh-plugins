@@ -15,7 +15,7 @@
  */
 
 import { ChatbotDisplayMode } from '@patternfly/chatbot';
-import { render, screen } from '@testing-library/react';
+import { render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 
 import { useLightspeedDrawerContext } from '../../hooks/useLightspeedDrawerContext';
@@ -157,7 +157,7 @@ describe('LightspeedDrawerProvider', () => {
     expect(screen.queryByTestId('chatbot-modal')).not.toBeInTheDocument();
   });
 
-  it('renders ChatbotModal with LightspeedChatContainer when shouldRenderOverlayModal is true', () => {
+  it('renders ChatbotModal with LightspeedChatContainer when shouldRenderOverlayModal is true', async () => {
     const closeChatbot = jest.fn();
     mockUseLightspeedProviderState.mockReturnValue({
       contextValue: {
@@ -185,7 +185,11 @@ describe('LightspeedDrawerProvider', () => {
       'lightspeed-chatpopup-modal',
     );
     expect(modal.className).toBeTruthy();
-    expect(screen.getByTestId('lightspeed-chat-container')).toBeInTheDocument();
+    await waitFor(() => {
+      expect(
+        screen.getByTestId('lightspeed-chat-container'),
+      ).toBeInTheDocument();
+    });
   });
 
   it('wires ChatbotModal onEscapePress to closeChatbot from the hook', async () => {

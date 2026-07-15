@@ -1,0 +1,3084 @@
+{
+  "results": [
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-adoption-insights",
+      "ws": "adoption-insights",
+      "wsRoot": "/Users/dsantra/Documents/rhdh-plugins/workspaces/adoption-insights",
+      "external": false,
+      "layout": "classic",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-adoption-insights/dist/dist/mf-manifest.json"
+      },
+      "manifest": {
+        "layout": "classic",
+        "exposes": [".", "alpha"],
+        "nfsExposeName": "alpha",
+        "ofsExposeName": ".",
+        "translationsExposeName": "alpha",
+        "nfs": {
+          "name": "alpha",
+          "syncCount": 4,
+          "syncKb": 244.3388671875,
+          "asyncCount": 200,
+          "syncPaths": [
+            "static/1805.a6b2da70.chunk.js",
+            "static/9604.b3c1834c.chunk.js",
+            "static/5096.51f958eb.chunk.js",
+            "static/__federation_expose_alpha.d3e53b12.chunk.js"
+          ]
+        },
+        "ofs": {
+          "name": ".",
+          "syncCount": 3,
+          "syncKb": 156.548828125,
+          "asyncCount": 195,
+          "syncPaths": [
+            "static/1805.a6b2da70.chunk.js",
+            "static/9604.b3c1834c.chunk.js",
+            "static/__federation_expose_default_export.c3bc0b4f.chunk.js"
+          ]
+        },
+        "translations": {
+          "name": "alpha",
+          "syncCount": 4,
+          "syncKb": 244.3388671875,
+          "asyncCount": 200,
+          "syncPaths": [
+            "static/1805.a6b2da70.chunk.js",
+            "static/9604.b3c1834c.chunk.js",
+            "static/5096.51f958eb.chunk.js",
+            "static/__federation_expose_alpha.d3e53b12.chunk.js"
+          ]
+        },
+        "alphaExposeName": "alpha",
+        "alpha": {
+          "name": "alpha",
+          "syncCount": 4,
+          "syncKb": 244.3388671875,
+          "asyncCount": 200,
+          "syncPaths": [
+            "static/1805.a6b2da70.chunk.js",
+            "static/9604.b3c1834c.chunk.js",
+            "static/5096.51f958eb.chunk.js",
+            "static/__federation_expose_alpha.d3e53b12.chunk.js"
+          ]
+        },
+        "deltaSyncCount": 1,
+        "deltaSyncKb": 87.7900390625,
+        "nfsOnlySync": [
+          "static/5096.51f958eb.chunk.js",
+          "static/__federation_expose_alpha.d3e53b12.chunk.js"
+        ],
+        "ofsOnlySync": [
+          "static/__federation_expose_default_export.c3bc0b4f.chunk.js"
+        ],
+        "alphaOnlySync": [
+          "static/5096.51f958eb.chunk.js",
+          "static/__federation_expose_alpha.d3e53b12.chunk.js"
+        ]
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-adoption-insights/dist/dist/mf-manifest.json",
+      "static": {
+        "hasDefaultExport": true,
+        "alphaEntry": "src/alpha.tsx",
+        "nfsEntry": "src/alpha.tsx",
+        "highCount": 0,
+        "findings": [
+          {
+            "severity": "medium",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/QueryStatsOutlined",
+            "file": "src/alpha.tsx"
+          }
+        ]
+      }
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-analytics-module-adoption-insights",
+      "ws": "adoption-insights",
+      "wsRoot": "/Users/dsantra/Documents/rhdh-plugins/workspaces/adoption-insights",
+      "external": false,
+      "layout": "classic",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-analytics-module-adoption-insights/dist/dist/mf-manifest.json"
+      },
+      "manifest": {
+        "layout": "classic",
+        "exposes": [".", "alpha"],
+        "nfsExposeName": "alpha",
+        "ofsExposeName": ".",
+        "translationsExposeName": "alpha",
+        "nfs": {
+          "name": "alpha",
+          "syncCount": 2,
+          "syncKb": 89.53125,
+          "asyncCount": 0,
+          "syncPaths": [
+            "static/698.33245e3b.chunk.js",
+            "static/__federation_expose_alpha.20043fe6.chunk.js"
+          ]
+        },
+        "ofs": {
+          "name": ".",
+          "syncCount": 1,
+          "syncKb": 4.5380859375,
+          "asyncCount": 0,
+          "syncPaths": [
+            "static/__federation_expose_default_export.0a6cd5c4.chunk.js"
+          ]
+        },
+        "translations": {
+          "name": "alpha",
+          "syncCount": 2,
+          "syncKb": 89.53125,
+          "asyncCount": 0,
+          "syncPaths": [
+            "static/698.33245e3b.chunk.js",
+            "static/__federation_expose_alpha.20043fe6.chunk.js"
+          ]
+        },
+        "alphaExposeName": "alpha",
+        "alpha": {
+          "name": "alpha",
+          "syncCount": 2,
+          "syncKb": 89.53125,
+          "asyncCount": 0,
+          "syncPaths": [
+            "static/698.33245e3b.chunk.js",
+            "static/__federation_expose_alpha.20043fe6.chunk.js"
+          ]
+        },
+        "deltaSyncCount": 1,
+        "deltaSyncKb": 84.9931640625,
+        "nfsOnlySync": [
+          "static/698.33245e3b.chunk.js",
+          "static/__federation_expose_alpha.20043fe6.chunk.js"
+        ],
+        "ofsOnlySync": [
+          "static/__federation_expose_default_export.0a6cd5c4.chunk.js"
+        ],
+        "alphaOnlySync": [
+          "static/698.33245e3b.chunk.js",
+          "static/__federation_expose_alpha.20043fe6.chunk.js"
+        ]
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-analytics-module-adoption-insights/dist/dist/mf-manifest.json",
+      "static": {
+        "hasDefaultExport": true,
+        "alphaEntry": "src/alpha.ts",
+        "nfsEntry": "src/alpha.ts",
+        "highCount": 0,
+        "findings": []
+      }
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-app-auth",
+      "ws": "app-defaults",
+      "wsRoot": "/Users/dsantra/Documents/rhdh-plugins/workspaces/app-defaults",
+      "external": false,
+      "layout": "classic",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-app-auth/dist/dist/mf-manifest.json"
+      },
+      "manifest": {
+        "layout": "classic",
+        "exposes": [".", "alpha"],
+        "nfsExposeName": "alpha",
+        "ofsExposeName": ".",
+        "translationsExposeName": "alpha",
+        "nfs": {
+          "name": "alpha",
+          "syncCount": 4,
+          "syncKb": 1472.8876953125,
+          "asyncCount": 193,
+          "syncPaths": [
+            "static/7145.666d0b8d.chunk.js",
+            "static/6573.9a19e289.chunk.js",
+            "static/9728.eaba184f.chunk.js",
+            "static/__federation_expose_alpha.d68537dc.chunk.js"
+          ]
+        },
+        "ofs": {
+          "name": ".",
+          "syncCount": 1,
+          "syncKb": 0.2919921875,
+          "asyncCount": 0,
+          "syncPaths": [
+            "static/__federation_expose_default_export.0ed518b0.chunk.js"
+          ]
+        },
+        "translations": {
+          "name": "alpha",
+          "syncCount": 4,
+          "syncKb": 1472.8876953125,
+          "asyncCount": 193,
+          "syncPaths": [
+            "static/7145.666d0b8d.chunk.js",
+            "static/6573.9a19e289.chunk.js",
+            "static/9728.eaba184f.chunk.js",
+            "static/__federation_expose_alpha.d68537dc.chunk.js"
+          ]
+        },
+        "alphaExposeName": "alpha",
+        "alpha": {
+          "name": "alpha",
+          "syncCount": 4,
+          "syncKb": 1472.8876953125,
+          "asyncCount": 193,
+          "syncPaths": [
+            "static/7145.666d0b8d.chunk.js",
+            "static/6573.9a19e289.chunk.js",
+            "static/9728.eaba184f.chunk.js",
+            "static/__federation_expose_alpha.d68537dc.chunk.js"
+          ]
+        },
+        "deltaSyncCount": 3,
+        "deltaSyncKb": 1472.595703125,
+        "nfsOnlySync": [
+          "static/7145.666d0b8d.chunk.js",
+          "static/6573.9a19e289.chunk.js",
+          "static/9728.eaba184f.chunk.js",
+          "static/__federation_expose_alpha.d68537dc.chunk.js"
+        ],
+        "ofsOnlySync": [
+          "static/__federation_expose_default_export.0ed518b0.chunk.js"
+        ],
+        "alphaOnlySync": [
+          "static/7145.666d0b8d.chunk.js",
+          "static/6573.9a19e289.chunk.js",
+          "static/9728.eaba184f.chunk.js",
+          "static/__federation_expose_alpha.d68537dc.chunk.js"
+        ]
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-app-auth/dist/dist/mf-manifest.json",
+      "static": {
+        "hasDefaultExport": true,
+        "alphaEntry": "src/alpha.ts",
+        "nfsEntry": "src/alpha.ts",
+        "highCount": 0,
+        "findings": []
+      }
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-app-integrations",
+      "ws": "app-defaults",
+      "wsRoot": "/Users/dsantra/Documents/rhdh-plugins/workspaces/app-defaults",
+      "external": false,
+      "layout": "classic",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-app-integrations/dist/dist/mf-manifest.json"
+      },
+      "manifest": {
+        "layout": "classic",
+        "exposes": [".", "alpha"],
+        "nfsExposeName": "alpha",
+        "ofsExposeName": ".",
+        "translationsExposeName": "alpha",
+        "nfs": {
+          "name": "alpha",
+          "syncCount": 2,
+          "syncKb": 226.30859375,
+          "asyncCount": 0,
+          "syncPaths": [
+            "static/216.0722df8a.chunk.js",
+            "static/__federation_expose_alpha.257fa929.chunk.js"
+          ]
+        },
+        "ofs": {
+          "name": ".",
+          "syncCount": 1,
+          "syncKb": 0.3046875,
+          "asyncCount": 0,
+          "syncPaths": [
+            "static/__federation_expose_default_export.d954eabe.chunk.js"
+          ]
+        },
+        "translations": {
+          "name": "alpha",
+          "syncCount": 2,
+          "syncKb": 226.30859375,
+          "asyncCount": 0,
+          "syncPaths": [
+            "static/216.0722df8a.chunk.js",
+            "static/__federation_expose_alpha.257fa929.chunk.js"
+          ]
+        },
+        "alphaExposeName": "alpha",
+        "alpha": {
+          "name": "alpha",
+          "syncCount": 2,
+          "syncKb": 226.30859375,
+          "asyncCount": 0,
+          "syncPaths": [
+            "static/216.0722df8a.chunk.js",
+            "static/__federation_expose_alpha.257fa929.chunk.js"
+          ]
+        },
+        "deltaSyncCount": 1,
+        "deltaSyncKb": 226.00390625,
+        "nfsOnlySync": [
+          "static/216.0722df8a.chunk.js",
+          "static/__federation_expose_alpha.257fa929.chunk.js"
+        ],
+        "ofsOnlySync": [
+          "static/__federation_expose_default_export.d954eabe.chunk.js"
+        ],
+        "alphaOnlySync": [
+          "static/216.0722df8a.chunk.js",
+          "static/__federation_expose_alpha.257fa929.chunk.js"
+        ]
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-app-integrations/dist/dist/mf-manifest.json",
+      "static": {
+        "hasDefaultExport": true,
+        "alphaEntry": "src/alpha.ts",
+        "nfsEntry": "src/alpha.ts",
+        "highCount": 0,
+        "findings": []
+      }
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-bcc-test",
+      "ws": "theme",
+      "wsRoot": "/Users/dsantra/Documents/rhdh-plugins/workspaces/theme",
+      "external": false,
+      "layout": "classic",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-bcc-test/dist/dist/mf-manifest.json"
+      },
+      "manifest": {
+        "layout": "classic",
+        "exposes": [".", "alpha"],
+        "nfsExposeName": "alpha",
+        "ofsExposeName": ".",
+        "translationsExposeName": "alpha",
+        "nfs": {
+          "name": "alpha",
+          "syncCount": 3,
+          "syncKb": 127.884765625,
+          "asyncCount": 195,
+          "syncPaths": [
+            "static/4113.c5c7ed5a.chunk.js",
+            "static/2404.618be9f8.chunk.js",
+            "static/__federation_expose_alpha.acb738eb.chunk.js"
+          ]
+        },
+        "ofs": {
+          "name": ".",
+          "syncCount": 2,
+          "syncKb": 44.0400390625,
+          "asyncCount": 194,
+          "syncPaths": [
+            "static/4113.c5c7ed5a.chunk.js",
+            "static/__federation_expose_default_export.968b26e9.chunk.js"
+          ]
+        },
+        "translations": {
+          "name": "alpha",
+          "syncCount": 3,
+          "syncKb": 127.884765625,
+          "asyncCount": 195,
+          "syncPaths": [
+            "static/4113.c5c7ed5a.chunk.js",
+            "static/2404.618be9f8.chunk.js",
+            "static/__federation_expose_alpha.acb738eb.chunk.js"
+          ]
+        },
+        "alphaExposeName": "alpha",
+        "alpha": {
+          "name": "alpha",
+          "syncCount": 3,
+          "syncKb": 127.884765625,
+          "asyncCount": 195,
+          "syncPaths": [
+            "static/4113.c5c7ed5a.chunk.js",
+            "static/2404.618be9f8.chunk.js",
+            "static/__federation_expose_alpha.acb738eb.chunk.js"
+          ]
+        },
+        "deltaSyncCount": 1,
+        "deltaSyncKb": 83.8447265625,
+        "nfsOnlySync": [
+          "static/2404.618be9f8.chunk.js",
+          "static/__federation_expose_alpha.acb738eb.chunk.js"
+        ],
+        "ofsOnlySync": [
+          "static/__federation_expose_default_export.968b26e9.chunk.js"
+        ],
+        "alphaOnlySync": [
+          "static/2404.618be9f8.chunk.js",
+          "static/__federation_expose_alpha.acb738eb.chunk.js"
+        ]
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-bcc-test/dist/dist/mf-manifest.json",
+      "static": {
+        "hasDefaultExport": true,
+        "alphaEntry": "src/alpha/index.tsx",
+        "nfsEntry": "src/alpha/index.tsx",
+        "highCount": 0,
+        "findings": []
+      }
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-bui-test",
+      "ws": "theme",
+      "wsRoot": "/Users/dsantra/Documents/rhdh-plugins/workspaces/theme",
+      "external": false,
+      "layout": "classic",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-bui-test/dist/dist/mf-manifest.json"
+      },
+      "manifest": {
+        "layout": "classic",
+        "exposes": [".", "alpha"],
+        "nfsExposeName": "alpha",
+        "ofsExposeName": ".",
+        "translationsExposeName": "alpha",
+        "nfs": {
+          "name": "alpha",
+          "syncCount": 4,
+          "syncKb": 131.103515625,
+          "asyncCount": 5,
+          "syncPaths": [
+            "static/242.a260ed71.chunk.js",
+            "static/113.8609a300.chunk.js",
+            "static/545.2c431a5c.chunk.js",
+            "static/__federation_expose_alpha.35be3c9a.chunk.js"
+          ]
+        },
+        "ofs": {
+          "name": ".",
+          "syncCount": 2,
+          "syncKb": 43.3564453125,
+          "asyncCount": 8,
+          "syncPaths": [
+            "static/113.8609a300.chunk.js",
+            "static/__federation_expose_default_export.3161ccbe.chunk.js"
+          ]
+        },
+        "translations": {
+          "name": "alpha",
+          "syncCount": 4,
+          "syncKb": 131.103515625,
+          "asyncCount": 5,
+          "syncPaths": [
+            "static/242.a260ed71.chunk.js",
+            "static/113.8609a300.chunk.js",
+            "static/545.2c431a5c.chunk.js",
+            "static/__federation_expose_alpha.35be3c9a.chunk.js"
+          ]
+        },
+        "alphaExposeName": "alpha",
+        "alpha": {
+          "name": "alpha",
+          "syncCount": 4,
+          "syncKb": 131.103515625,
+          "asyncCount": 5,
+          "syncPaths": [
+            "static/242.a260ed71.chunk.js",
+            "static/113.8609a300.chunk.js",
+            "static/545.2c431a5c.chunk.js",
+            "static/__federation_expose_alpha.35be3c9a.chunk.js"
+          ]
+        },
+        "deltaSyncCount": 2,
+        "deltaSyncKb": 87.7470703125,
+        "nfsOnlySync": [
+          "static/242.a260ed71.chunk.js",
+          "static/545.2c431a5c.chunk.js",
+          "static/__federation_expose_alpha.35be3c9a.chunk.js"
+        ],
+        "ofsOnlySync": [
+          "static/__federation_expose_default_export.3161ccbe.chunk.js"
+        ],
+        "alphaOnlySync": [
+          "static/242.a260ed71.chunk.js",
+          "static/545.2c431a5c.chunk.js",
+          "static/__federation_expose_alpha.35be3c9a.chunk.js"
+        ]
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-bui-test/dist/dist/mf-manifest.json",
+      "static": {
+        "hasDefaultExport": true,
+        "alphaEntry": "src/alpha/index.tsx",
+        "nfsEntry": "src/alpha/index.tsx",
+        "highCount": 0,
+        "findings": []
+      }
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-bulk-import",
+      "ws": "bulk-import",
+      "wsRoot": "/Users/dsantra/Documents/rhdh-plugins/workspaces/bulk-import",
+      "external": false,
+      "layout": "classic",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-bulk-import/dist/dist/mf-manifest.json"
+      },
+      "manifest": {
+        "layout": "classic",
+        "exposes": [".", "alpha"],
+        "nfsExposeName": "alpha",
+        "ofsExposeName": ".",
+        "translationsExposeName": "alpha",
+        "nfs": {
+          "name": "alpha",
+          "syncCount": 5,
+          "syncKb": 467.5537109375,
+          "asyncCount": 201,
+          "syncPaths": [
+            "static/1404.b54a709e.chunk.js",
+            "static/6573.d6b39d40.chunk.js",
+            "static/5842.b8016b0b.chunk.js",
+            "static/3451.c8145ab3.chunk.js",
+            "static/__federation_expose_alpha.facc961f.chunk.js"
+          ]
+        },
+        "ofs": {
+          "name": ".",
+          "syncCount": 4,
+          "syncKb": 380.01171875,
+          "asyncCount": 196,
+          "syncPaths": [
+            "static/1404.b54a709e.chunk.js",
+            "static/6573.d6b39d40.chunk.js",
+            "static/5842.b8016b0b.chunk.js",
+            "static/__federation_expose_default_export.12f3d646.chunk.js"
+          ]
+        },
+        "translations": {
+          "name": "alpha",
+          "syncCount": 5,
+          "syncKb": 467.5537109375,
+          "asyncCount": 201,
+          "syncPaths": [
+            "static/1404.b54a709e.chunk.js",
+            "static/6573.d6b39d40.chunk.js",
+            "static/5842.b8016b0b.chunk.js",
+            "static/3451.c8145ab3.chunk.js",
+            "static/__federation_expose_alpha.facc961f.chunk.js"
+          ]
+        },
+        "alphaExposeName": "alpha",
+        "alpha": {
+          "name": "alpha",
+          "syncCount": 5,
+          "syncKb": 467.5537109375,
+          "asyncCount": 201,
+          "syncPaths": [
+            "static/1404.b54a709e.chunk.js",
+            "static/6573.d6b39d40.chunk.js",
+            "static/5842.b8016b0b.chunk.js",
+            "static/3451.c8145ab3.chunk.js",
+            "static/__federation_expose_alpha.facc961f.chunk.js"
+          ]
+        },
+        "deltaSyncCount": 1,
+        "deltaSyncKb": 87.5419921875,
+        "nfsOnlySync": [
+          "static/3451.c8145ab3.chunk.js",
+          "static/__federation_expose_alpha.facc961f.chunk.js"
+        ],
+        "ofsOnlySync": [
+          "static/__federation_expose_default_export.12f3d646.chunk.js"
+        ],
+        "alphaOnlySync": [
+          "static/3451.c8145ab3.chunk.js",
+          "static/__federation_expose_alpha.facc961f.chunk.js"
+        ]
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-bulk-import/dist/dist/mf-manifest.json",
+      "static": {
+        "hasDefaultExport": true,
+        "alphaEntry": "src/alpha.tsx",
+        "nfsEntry": "src/alpha.tsx",
+        "highCount": 1,
+        "findings": [
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ./components/BulkImportIcon",
+            "file": "src/alpha.tsx"
+          }
+        ]
+      }
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-extensions",
+      "ws": "extensions",
+      "wsRoot": "/Users/dsantra/Documents/rhdh-plugins/workspaces/extensions",
+      "external": false,
+      "layout": "classic",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-extensions/dist/dist/mf-manifest.json"
+      },
+      "manifest": {
+        "layout": "classic",
+        "exposes": [".", "alpha"],
+        "nfsExposeName": "alpha",
+        "ofsExposeName": ".",
+        "translationsExposeName": "alpha",
+        "nfs": {
+          "name": "alpha",
+          "syncCount": 4,
+          "syncKb": 246.6259765625,
+          "asyncCount": 206,
+          "syncPaths": [
+            "static/1805.2d1d704e.chunk.js",
+            "static/3425.2dc0fe32.chunk.js",
+            "static/9373.8213f2b4.chunk.js",
+            "static/__federation_expose_alpha.9e99f954.chunk.js"
+          ]
+        },
+        "ofs": {
+          "name": ".",
+          "syncCount": 3,
+          "syncKb": 102.56640625,
+          "asyncCount": 202,
+          "syncPaths": [
+            "static/1805.2d1d704e.chunk.js",
+            "static/3425.2dc0fe32.chunk.js",
+            "static/__federation_expose_default_export.6a8dde28.chunk.js"
+          ]
+        },
+        "translations": {
+          "name": "alpha",
+          "syncCount": 4,
+          "syncKb": 246.6259765625,
+          "asyncCount": 206,
+          "syncPaths": [
+            "static/1805.2d1d704e.chunk.js",
+            "static/3425.2dc0fe32.chunk.js",
+            "static/9373.8213f2b4.chunk.js",
+            "static/__federation_expose_alpha.9e99f954.chunk.js"
+          ]
+        },
+        "alphaExposeName": "alpha",
+        "alpha": {
+          "name": "alpha",
+          "syncCount": 4,
+          "syncKb": 246.6259765625,
+          "asyncCount": 206,
+          "syncPaths": [
+            "static/1805.2d1d704e.chunk.js",
+            "static/3425.2dc0fe32.chunk.js",
+            "static/9373.8213f2b4.chunk.js",
+            "static/__federation_expose_alpha.9e99f954.chunk.js"
+          ]
+        },
+        "deltaSyncCount": 1,
+        "deltaSyncKb": 144.0595703125,
+        "nfsOnlySync": [
+          "static/9373.8213f2b4.chunk.js",
+          "static/__federation_expose_alpha.9e99f954.chunk.js"
+        ],
+        "ofsOnlySync": [
+          "static/__federation_expose_default_export.6a8dde28.chunk.js"
+        ],
+        "alphaOnlySync": [
+          "static/9373.8213f2b4.chunk.js",
+          "static/__federation_expose_alpha.9e99f954.chunk.js"
+        ]
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-extensions/dist/dist/mf-manifest.json",
+      "static": {
+        "hasDefaultExport": true,
+        "alphaEntry": "src/alpha/index.tsx",
+        "nfsEntry": "src/alpha/index.tsx",
+        "highCount": 0,
+        "findings": [
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/className",
+            "file": "src/alpha/index.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/ShoppingBasketOutlined",
+            "file": "src/alpha/index.tsx"
+          }
+        ]
+      }
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-global-header",
+      "ws": "global-header",
+      "wsRoot": "/Users/dsantra/Documents/rhdh-plugins/workspaces/global-header",
+      "external": false,
+      "layout": "classic",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-global-header/dist/dist/mf-manifest.json"
+      },
+      "manifest": {
+        "layout": "classic",
+        "exposes": [".", "alpha"],
+        "nfsExposeName": "alpha",
+        "ofsExposeName": ".",
+        "translationsExposeName": "alpha",
+        "nfs": {
+          "name": "alpha",
+          "syncCount": 5,
+          "syncKb": 1041.2919921875,
+          "asyncCount": 197,
+          "syncPaths": [
+            "static/7145.dbb580b2.chunk.js",
+            "static/6605.a171b962.chunk.js",
+            "static/9501.26463f1c.chunk.js",
+            "static/7768.cd82f97e.chunk.js",
+            "static/__federation_expose_alpha.b5f7e14d.chunk.js"
+          ]
+        },
+        "ofs": {
+          "name": ".",
+          "syncCount": 5,
+          "syncKb": 1049.23828125,
+          "asyncCount": 202,
+          "syncPaths": [
+            "static/7145.dbb580b2.chunk.js",
+            "static/6605.a171b962.chunk.js",
+            "static/9501.26463f1c.chunk.js",
+            "static/5287.7777b51e.chunk.js",
+            "static/__federation_expose_default_export.98fdb8bb.chunk.js"
+          ]
+        },
+        "translations": {
+          "name": "alpha",
+          "syncCount": 5,
+          "syncKb": 1041.2919921875,
+          "asyncCount": 197,
+          "syncPaths": [
+            "static/7145.dbb580b2.chunk.js",
+            "static/6605.a171b962.chunk.js",
+            "static/9501.26463f1c.chunk.js",
+            "static/7768.cd82f97e.chunk.js",
+            "static/__federation_expose_alpha.b5f7e14d.chunk.js"
+          ]
+        },
+        "alphaExposeName": "alpha",
+        "alpha": {
+          "name": "alpha",
+          "syncCount": 5,
+          "syncKb": 1041.2919921875,
+          "asyncCount": 197,
+          "syncPaths": [
+            "static/7145.dbb580b2.chunk.js",
+            "static/6605.a171b962.chunk.js",
+            "static/9501.26463f1c.chunk.js",
+            "static/7768.cd82f97e.chunk.js",
+            "static/__federation_expose_alpha.b5f7e14d.chunk.js"
+          ]
+        },
+        "deltaSyncCount": 0,
+        "deltaSyncKb": -7.9462890625,
+        "nfsOnlySync": [
+          "static/7768.cd82f97e.chunk.js",
+          "static/__federation_expose_alpha.b5f7e14d.chunk.js"
+        ],
+        "ofsOnlySync": [
+          "static/5287.7777b51e.chunk.js",
+          "static/__federation_expose_default_export.98fdb8bb.chunk.js"
+        ],
+        "alphaOnlySync": [
+          "static/7768.cd82f97e.chunk.js",
+          "static/__federation_expose_alpha.b5f7e14d.chunk.js"
+        ]
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-global-header/dist/dist/mf-manifest.json",
+      "static": {
+        "hasDefaultExport": true,
+        "alphaEntry": "src/alpha/index.ts",
+        "nfsEntry": "src/alpha/index.ts",
+        "highCount": 32,
+        "findings": [
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/Apps",
+            "file": "src/alpha/components/ApplicationLauncherDropdown.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/AppRegistration",
+            "file": "src/alpha/components/ApplicationLauncherDropdown.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../../components/HeaderDropdownComponent/DropdownEmptyState",
+            "file": "src/alpha/components/ApplicationLauncherDropdown.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @backstage/core-components",
+            "file": "src/alpha/components/GlobalHeader.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/AppBar",
+            "file": "src/alpha/components/GlobalHeader.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Box",
+            "file": "src/alpha/components/GlobalHeader.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Toolbar",
+            "file": "src/alpha/components/GlobalHeader.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Button",
+            "file": "src/alpha/components/GlobalHeaderDropdown.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../../components/HeaderDropdownComponent/HeaderDropdownComponent",
+            "file": "src/alpha/components/GlobalHeaderDropdown.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../../components/HeaderDropdownComponent/MenuSection",
+            "file": "src/alpha/components/GlobalHeaderDropdownContent.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @backstage/core-components",
+            "file": "src/alpha/components/GlobalHeaderMenuItem.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/MenuItem",
+            "file": "src/alpha/components/GlobalHeaderMenuItem.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../../components/MenuItemLink/MenuItemLink",
+            "file": "src/alpha/components/GlobalHeaderMenuItem.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/HelpOutline",
+            "file": "src/alpha/components/HelpDropdown.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/SupportAgent",
+            "file": "src/alpha/components/HelpDropdown.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../../components/HeaderDropdownComponent/DropdownEmptyState",
+            "file": "src/alpha/components/HelpDropdown.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @backstage/core-components",
+            "file": "src/alpha/components/MyProfileMenuItem.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/MenuItem",
+            "file": "src/alpha/components/MyProfileMenuItem.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../../components/MenuItemLink/MenuItemLinkContent",
+            "file": "src/alpha/components/MyProfileMenuItem.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/AccountCircleOutlined",
+            "file": "src/alpha/components/ProfileDropdown.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/KeyboardArrowDownOutlined",
+            "file": "src/alpha/components/ProfileDropdown.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Avatar",
+            "file": "src/alpha/components/ProfileDropdown.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Typography",
+            "file": "src/alpha/components/ProfileDropdown.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Box",
+            "file": "src/alpha/components/ProfileDropdown.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/styles",
+            "file": "src/alpha/components/ProfileDropdown.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../../components/LogoutButton/LogoutButton",
+            "file": "src/alpha/defaults/menuItemExtensions.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../../components/SupportButton/SupportButton",
+            "file": "src/alpha/defaults/menuItemExtensions.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../components/MyProfileMenuItem",
+            "file": "src/alpha/defaults/menuItemExtensions.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../../components/SearchComponent/SearchComponent",
+            "file": "src/alpha/defaults/toolbarExtensions.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../../components/Spacer/Spacer",
+            "file": "src/alpha/defaults/toolbarExtensions.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../../components/HeaderDropdownComponent/StarredDropdown",
+            "file": "src/alpha/defaults/toolbarExtensions.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../../components/NotificationButton/NotificationButton",
+            "file": "src/alpha/defaults/toolbarExtensions.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../../components/Divider/Divider",
+            "file": "src/alpha/defaults/toolbarExtensions.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../../components/CompanyLogo/CompanyLogo",
+            "file": "src/alpha/defaults/toolbarExtensions.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../../components/HeaderIconButton/HeaderIconButton",
+            "file": "src/alpha/defaults/toolbarExtensions.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../components/ProfileDropdown",
+            "file": "src/alpha/defaults/toolbarExtensions.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../components/HelpDropdown",
+            "file": "src/alpha/defaults/toolbarExtensions.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../components/ApplicationLauncherDropdown",
+            "file": "src/alpha/defaults/toolbarExtensions.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/IconButton",
+            "file": "src/alpha/extensions/blueprints.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Tooltip",
+            "file": "src/alpha/extensions/blueprints.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../../components/HeaderIconButton/HeaderIconButton",
+            "file": "src/alpha/extensions/blueprints.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../../components/HeaderIcon/HeaderIcon",
+            "file": "src/alpha/extensions/blueprints.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../components/GlobalHeader",
+            "file": "src/alpha/extensions/globalHeaderModule.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "app-root-static-component",
+            "message": "App root blueprint with static component: ../components/GlobalHeader",
+            "file": "src/alpha/extensions/globalHeaderModule.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../../components/MenuItemLink/MenuItemLink",
+            "file": "src/alpha/utils/menuItemGrouping.ts"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../../components/HeaderDropdownComponent/MenuSection",
+            "file": "src/alpha/utils/menuItemGrouping.ts"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../../components/HeaderIconButton/HeaderIconButton",
+            "file": "src/alpha/utils/readConfigComponents.tsx"
+          }
+        ]
+      }
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-homepage",
+      "ws": "homepage",
+      "wsRoot": "/Users/dsantra/Documents/rhdh-plugins/workspaces/homepage",
+      "external": false,
+      "layout": "classic",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-homepage/dist/dist/mf-manifest.json"
+      },
+      "manifest": {
+        "layout": "classic",
+        "exposes": [".", "alpha"],
+        "nfsExposeName": "alpha",
+        "ofsExposeName": ".",
+        "translationsExposeName": "alpha",
+        "nfs": {
+          "name": "alpha",
+          "syncCount": 11,
+          "syncKb": 784.46484375,
+          "asyncCount": 242,
+          "syncPaths": [
+            "static/8088.6af4d402.chunk.js",
+            "static/4741.a71854dd.chunk.js",
+            "static/2218.f32d2abb.chunk.js",
+            "static/3479.c52c1fb6.chunk.js",
+            "static/4233.93160f7f.chunk.js",
+            "static/1103.585959f6.chunk.js",
+            "static/5956.fb828b21.chunk.js",
+            "static/4619.45e205ae.chunk.js",
+            "static/6336.ba55f2c1.chunk.js",
+            "static/9900.ae383738.chunk.js",
+            "static/__federation_expose_alpha.c42bce1b.chunk.js"
+          ]
+        },
+        "ofs": {
+          "name": ".",
+          "syncCount": 2,
+          "syncKb": 26.5751953125,
+          "asyncCount": 253,
+          "syncPaths": [
+            "static/6336.ba55f2c1.chunk.js",
+            "static/__federation_expose_default_export.fe81319f.chunk.js"
+          ]
+        },
+        "translations": {
+          "name": "alpha",
+          "syncCount": 11,
+          "syncKb": 784.46484375,
+          "asyncCount": 242,
+          "syncPaths": [
+            "static/8088.6af4d402.chunk.js",
+            "static/4741.a71854dd.chunk.js",
+            "static/2218.f32d2abb.chunk.js",
+            "static/3479.c52c1fb6.chunk.js",
+            "static/4233.93160f7f.chunk.js",
+            "static/1103.585959f6.chunk.js",
+            "static/5956.fb828b21.chunk.js",
+            "static/4619.45e205ae.chunk.js",
+            "static/6336.ba55f2c1.chunk.js",
+            "static/9900.ae383738.chunk.js",
+            "static/__federation_expose_alpha.c42bce1b.chunk.js"
+          ]
+        },
+        "alphaExposeName": "alpha",
+        "alpha": {
+          "name": "alpha",
+          "syncCount": 11,
+          "syncKb": 784.46484375,
+          "asyncCount": 242,
+          "syncPaths": [
+            "static/8088.6af4d402.chunk.js",
+            "static/4741.a71854dd.chunk.js",
+            "static/2218.f32d2abb.chunk.js",
+            "static/3479.c52c1fb6.chunk.js",
+            "static/4233.93160f7f.chunk.js",
+            "static/1103.585959f6.chunk.js",
+            "static/5956.fb828b21.chunk.js",
+            "static/4619.45e205ae.chunk.js",
+            "static/6336.ba55f2c1.chunk.js",
+            "static/9900.ae383738.chunk.js",
+            "static/__federation_expose_alpha.c42bce1b.chunk.js"
+          ]
+        },
+        "deltaSyncCount": 9,
+        "deltaSyncKb": 757.8896484375,
+        "nfsOnlySync": [
+          "static/8088.6af4d402.chunk.js",
+          "static/4741.a71854dd.chunk.js",
+          "static/2218.f32d2abb.chunk.js",
+          "static/3479.c52c1fb6.chunk.js",
+          "static/4233.93160f7f.chunk.js",
+          "static/1103.585959f6.chunk.js",
+          "static/5956.fb828b21.chunk.js",
+          "static/4619.45e205ae.chunk.js",
+          "static/9900.ae383738.chunk.js",
+          "static/__federation_expose_alpha.c42bce1b.chunk.js"
+        ],
+        "ofsOnlySync": [
+          "static/__federation_expose_default_export.fe81319f.chunk.js"
+        ],
+        "alphaOnlySync": [
+          "static/8088.6af4d402.chunk.js",
+          "static/4741.a71854dd.chunk.js",
+          "static/2218.f32d2abb.chunk.js",
+          "static/3479.c52c1fb6.chunk.js",
+          "static/4233.93160f7f.chunk.js",
+          "static/1103.585959f6.chunk.js",
+          "static/5956.fb828b21.chunk.js",
+          "static/4619.45e205ae.chunk.js",
+          "static/9900.ae383738.chunk.js",
+          "static/__federation_expose_alpha.c42bce1b.chunk.js"
+        ]
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-homepage/dist/dist/mf-manifest.json",
+      "static": {
+        "hasDefaultExport": true,
+        "alphaEntry": "src/alpha/index.ts",
+        "nfsEntry": "src/alpha/index.ts",
+        "highCount": 1,
+        "findings": [
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/styles",
+            "file": "src/alpha/components/CustomizableGridLayout.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/GlobalStyles",
+            "file": "src/alpha/components/CustomizableGridLayout.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @backstage/core-components",
+            "file": "src/alpha/components/HomePageLayout.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../../components/Header",
+            "file": "src/alpha/components/HomePageLayout.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @backstage/core-components",
+            "file": "src/alpha/components/ReadOnlyGirdLayout.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Box",
+            "file": "src/alpha/components/ReadOnlyGirdLayout.tsx"
+          }
+        ]
+      }
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-lightspeed",
+      "ws": "lightspeed",
+      "wsRoot": "/Users/dsantra/Documents/rhdh-plugins/workspaces/lightspeed",
+      "external": false,
+      "layout": "graduated",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-lightspeed/dist/dist/mf-manifest.json"
+      },
+      "manifest": {
+        "layout": "graduated",
+        "exposes": [
+          ".",
+          "alpha",
+          "lightspeed-fab-module",
+          "lightspeed-translations-module"
+        ],
+        "nfsExposeName": ".",
+        "ofsExposeName": null,
+        "translationsExposeName": "alpha",
+        "nfs": {
+          "name": ".",
+          "syncCount": 6,
+          "syncKb": 3773.6103515625,
+          "asyncCount": 96,
+          "syncPaths": [
+            "static/873.5583ab14.chunk.js",
+            "static/9927.78f28859.chunk.js",
+            "static/6605.3c32b5f8.chunk.js",
+            "static/7709.3d74caeb.chunk.js",
+            "static/__federation_expose_default_export.836bf385.chunk.js",
+            "static/7709.7709.4c617f2a.css"
+          ]
+        },
+        "ofs": null,
+        "translations": {
+          "name": "alpha",
+          "syncCount": 6,
+          "syncKb": 3773.755859375,
+          "asyncCount": 96,
+          "syncPaths": [
+            "static/873.5583ab14.chunk.js",
+            "static/9927.78f28859.chunk.js",
+            "static/6605.3c32b5f8.chunk.js",
+            "static/7709.3d74caeb.chunk.js",
+            "static/__federation_expose_alpha.cc46b6e3.chunk.js",
+            "static/7709.7709.4c617f2a.css"
+          ]
+        },
+        "alphaExposeName": ".",
+        "alpha": {
+          "name": ".",
+          "syncCount": 6,
+          "syncKb": 3773.6103515625,
+          "asyncCount": 96,
+          "syncPaths": [
+            "static/873.5583ab14.chunk.js",
+            "static/9927.78f28859.chunk.js",
+            "static/6605.3c32b5f8.chunk.js",
+            "static/7709.3d74caeb.chunk.js",
+            "static/__federation_expose_default_export.836bf385.chunk.js",
+            "static/7709.7709.4c617f2a.css"
+          ]
+        },
+        "deltaSyncCount": null,
+        "deltaSyncKb": null,
+        "nfsOnlySync": [
+          "static/873.5583ab14.chunk.js",
+          "static/9927.78f28859.chunk.js",
+          "static/6605.3c32b5f8.chunk.js",
+          "static/7709.3d74caeb.chunk.js",
+          "static/__federation_expose_default_export.836bf385.chunk.js",
+          "static/7709.7709.4c617f2a.css"
+        ],
+        "ofsOnlySync": [],
+        "alphaOnlySync": [
+          "static/873.5583ab14.chunk.js",
+          "static/9927.78f28859.chunk.js",
+          "static/6605.3c32b5f8.chunk.js",
+          "static/7709.3d74caeb.chunk.js",
+          "static/__federation_expose_default_export.836bf385.chunk.js",
+          "static/7709.7709.4c617f2a.css"
+        ]
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-lightspeed/dist/dist/mf-manifest.json",
+      "static": {
+        "hasDefaultExport": true,
+        "alphaEntry": "src/index.tsx",
+        "nfsEntry": "src/index.tsx",
+        "highCount": 26,
+        "findings": [
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core",
+            "file": "src/components/Attachment.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core",
+            "file": "src/components/CollapsedHistoryStrip.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core",
+            "file": "src/components/FilePreview.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core",
+            "file": "src/components/LightSpeedChat.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Tab",
+            "file": "src/components/LightSpeedChat.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Tabs",
+            "file": "src/components/LightSpeedChat.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core",
+            "file": "src/components/LightspeedChatBox.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core",
+            "file": "src/components/LightspeedChatBoxHeader.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/ToggleOffOutlined",
+            "file": "src/components/LightspeedChatBoxHeader.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/ToggleOnOutlined",
+            "file": "src/components/LightspeedChatBoxHeader.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Divider",
+            "file": "src/components/LightspeedChatBoxHeader.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core",
+            "file": "src/components/LightspeedChatContainer.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core/styles",
+            "file": "src/components/LightspeedChatContainer.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/OpenInNew",
+            "file": "src/components/LightspeedChatContainer.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core",
+            "file": "src/components/LightspeedChatModelsState.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core/styles",
+            "file": "src/components/LightspeedChatModelsState.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/ErrorOutline",
+            "file": "src/components/LightspeedChatModelsState.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/OpenInNew",
+            "file": "src/components/LightspeedChatModelsState.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/SmartToyOutlined",
+            "file": "src/components/LightspeedChatModelsState.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Box",
+            "file": "src/components/LightspeedFABContent.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Fab",
+            "file": "src/components/LightspeedFABContent.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Tooltip",
+            "file": "src/components/LightspeedFABContent.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @backstage/core-components",
+            "file": "src/components/LightspeedPage.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core/styles",
+            "file": "src/components/LightspeedPage.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core",
+            "file": "src/components/McpServersSettings.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/CancelOutlined",
+            "file": "src/components/McpServersSettings.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/CloseOutlined",
+            "file": "src/components/McpServersSettings.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/IconButton",
+            "file": "src/components/McpServersSettings.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/InputAdornment",
+            "file": "src/components/McpServersSettings.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/TextField",
+            "file": "src/components/McpServersSettings.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Typography",
+            "file": "src/components/McpServersSettings.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core",
+            "file": "src/components/MessageBarModelSelector.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @backstage/core-components",
+            "file": "src/components/PermissionRequiredState.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core/styles",
+            "file": "src/components/PermissionRequiredState.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core",
+            "file": "src/components/RenameConversationModal.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/CancelOutlined",
+            "file": "src/components/RenameConversationModal.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/Close",
+            "file": "src/components/RenameConversationModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Alert",
+            "file": "src/components/RenameConversationModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Box",
+            "file": "src/components/RenameConversationModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Button",
+            "file": "src/components/RenameConversationModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Dialog",
+            "file": "src/components/RenameConversationModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/DialogActions",
+            "file": "src/components/RenameConversationModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/DialogContent",
+            "file": "src/components/RenameConversationModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/DialogTitle",
+            "file": "src/components/RenameConversationModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/IconButton",
+            "file": "src/components/RenameConversationModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Typography",
+            "file": "src/components/RenameConversationModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core/styles",
+            "file": "src/components/Router.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core",
+            "file": "src/components/SourcesChipModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core",
+            "file": "src/components/ToolCallContent.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core/styles",
+            "file": "src/components/notebooks/AddDocumentModal.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/Close",
+            "file": "src/components/notebooks/AddDocumentModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Alert",
+            "file": "src/components/notebooks/AddDocumentModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Box",
+            "file": "src/components/notebooks/AddDocumentModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Button",
+            "file": "src/components/notebooks/AddDocumentModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Dialog",
+            "file": "src/components/notebooks/AddDocumentModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/DialogActions",
+            "file": "src/components/notebooks/AddDocumentModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/DialogContent",
+            "file": "src/components/notebooks/AddDocumentModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/DialogTitle",
+            "file": "src/components/notebooks/AddDocumentModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/IconButton",
+            "file": "src/components/notebooks/AddDocumentModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Typography",
+            "file": "src/components/notebooks/AddDocumentModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core/styles",
+            "file": "src/components/notebooks/DeleteDocumentModal.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/Close",
+            "file": "src/components/notebooks/DeleteDocumentModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Box",
+            "file": "src/components/notebooks/DeleteDocumentModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Button",
+            "file": "src/components/notebooks/DeleteDocumentModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Dialog",
+            "file": "src/components/notebooks/DeleteDocumentModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/DialogActions",
+            "file": "src/components/notebooks/DeleteDocumentModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/DialogContent",
+            "file": "src/components/notebooks/DeleteDocumentModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/DialogTitle",
+            "file": "src/components/notebooks/DeleteDocumentModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/IconButton",
+            "file": "src/components/notebooks/DeleteDocumentModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Typography",
+            "file": "src/components/notebooks/DeleteDocumentModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core/styles",
+            "file": "src/components/notebooks/DeleteNotebookModal.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/Close",
+            "file": "src/components/notebooks/DeleteNotebookModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Alert",
+            "file": "src/components/notebooks/DeleteNotebookModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Box",
+            "file": "src/components/notebooks/DeleteNotebookModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Button",
+            "file": "src/components/notebooks/DeleteNotebookModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Dialog",
+            "file": "src/components/notebooks/DeleteNotebookModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/DialogActions",
+            "file": "src/components/notebooks/DeleteNotebookModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/DialogContent",
+            "file": "src/components/notebooks/DeleteNotebookModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/DialogTitle",
+            "file": "src/components/notebooks/DeleteNotebookModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/IconButton",
+            "file": "src/components/notebooks/DeleteNotebookModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Typography",
+            "file": "src/components/notebooks/DeleteNotebookModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core",
+            "file": "src/components/notebooks/DocumentSidebar.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core/styles",
+            "file": "src/components/notebooks/FileListItem.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/Close",
+            "file": "src/components/notebooks/FileListItem.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Box",
+            "file": "src/components/notebooks/FileListItem.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/IconButton",
+            "file": "src/components/notebooks/FileListItem.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Typography",
+            "file": "src/components/notebooks/FileListItem.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core",
+            "file": "src/components/notebooks/FileTypeIcon.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Typography",
+            "file": "src/components/notebooks/NotebookCard.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core",
+            "file": "src/components/notebooks/NotebookView.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core",
+            "file": "src/components/notebooks/NotebooksTab.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core/styles",
+            "file": "src/components/notebooks/OverwriteConfirmModal.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/Close",
+            "file": "src/components/notebooks/OverwriteConfirmModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Alert",
+            "file": "src/components/notebooks/OverwriteConfirmModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Button",
+            "file": "src/components/notebooks/OverwriteConfirmModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Dialog",
+            "file": "src/components/notebooks/OverwriteConfirmModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/DialogActions",
+            "file": "src/components/notebooks/OverwriteConfirmModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/DialogContent",
+            "file": "src/components/notebooks/OverwriteConfirmModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/DialogTitle",
+            "file": "src/components/notebooks/OverwriteConfirmModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/IconButton",
+            "file": "src/components/notebooks/OverwriteConfirmModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Typography",
+            "file": "src/components/notebooks/OverwriteConfirmModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core",
+            "file": "src/components/notebooks/RenameNotebookModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core/styles",
+            "file": "src/components/notebooks/RenameNotebookModal.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/Close",
+            "file": "src/components/notebooks/RenameNotebookModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Alert",
+            "file": "src/components/notebooks/RenameNotebookModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Box",
+            "file": "src/components/notebooks/RenameNotebookModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Button",
+            "file": "src/components/notebooks/RenameNotebookModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Dialog",
+            "file": "src/components/notebooks/RenameNotebookModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/DialogActions",
+            "file": "src/components/notebooks/RenameNotebookModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/DialogContent",
+            "file": "src/components/notebooks/RenameNotebookModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/DialogTitle",
+            "file": "src/components/notebooks/RenameNotebookModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/IconButton",
+            "file": "src/components/notebooks/RenameNotebookModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Typography",
+            "file": "src/components/notebooks/RenameNotebookModal.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core",
+            "file": "src/components/notebooks/UploadResourceScreen.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/styles",
+            "file": "src/hooks/useConversationMessages.ts"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../components/LightspeedChatBox",
+            "file": "src/hooks/useConversationMessages.ts"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../components/LightspeedDrawerContext",
+            "file": "src/hooks/useLightspeedDrawerContext.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../components/LightspeedDrawerContext",
+            "file": "src/hooks/useLightspeedProviderState.ts"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/className",
+            "file": "src/index.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ./components/LightspeedChatContainer",
+            "file": "src/index.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ./components/LightspeedDrawerProvider",
+            "file": "src/index.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ./components/LightspeedFABContent",
+            "file": "src/index.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "app-root-static-component",
+            "message": "App root blueprint with static component: ./components/LightspeedChatContainer",
+            "file": "src/index.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "app-root-static-component",
+            "message": "App root blueprint with static component: ./components/LightspeedDrawerProvider",
+            "file": "src/index.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "app-root-static-component",
+            "message": "App root blueprint with static component: ./components/LightspeedFABContent",
+            "file": "src/index.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @material-ui/core/styles",
+            "file": "src/utils/generateClassName.ts"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../components/ToolCallContent",
+            "file": "src/utils/toolCallMapper.tsx"
+          }
+        ]
+      }
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-mui4-test",
+      "ws": "theme",
+      "wsRoot": "/Users/dsantra/Documents/rhdh-plugins/workspaces/theme",
+      "external": false,
+      "layout": "classic",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-mui4-test/dist/dist/mf-manifest.json"
+      },
+      "manifest": {
+        "layout": "classic",
+        "exposes": [".", "alpha"],
+        "nfsExposeName": "alpha",
+        "ofsExposeName": ".",
+        "translationsExposeName": "alpha",
+        "nfs": {
+          "name": "alpha",
+          "syncCount": 3,
+          "syncKb": 127.822265625,
+          "asyncCount": 196,
+          "syncPaths": [
+            "static/4113.9c3ada7b.chunk.js",
+            "static/2404.1b07d7f8.chunk.js",
+            "static/__federation_expose_alpha.a819aa93.chunk.js"
+          ]
+        },
+        "ofs": {
+          "name": ".",
+          "syncCount": 2,
+          "syncKb": 43.97265625,
+          "asyncCount": 195,
+          "syncPaths": [
+            "static/4113.9c3ada7b.chunk.js",
+            "static/__federation_expose_default_export.24f2deca.chunk.js"
+          ]
+        },
+        "translations": {
+          "name": "alpha",
+          "syncCount": 3,
+          "syncKb": 127.822265625,
+          "asyncCount": 196,
+          "syncPaths": [
+            "static/4113.9c3ada7b.chunk.js",
+            "static/2404.1b07d7f8.chunk.js",
+            "static/__federation_expose_alpha.a819aa93.chunk.js"
+          ]
+        },
+        "alphaExposeName": "alpha",
+        "alpha": {
+          "name": "alpha",
+          "syncCount": 3,
+          "syncKb": 127.822265625,
+          "asyncCount": 196,
+          "syncPaths": [
+            "static/4113.9c3ada7b.chunk.js",
+            "static/2404.1b07d7f8.chunk.js",
+            "static/__federation_expose_alpha.a819aa93.chunk.js"
+          ]
+        },
+        "deltaSyncCount": 1,
+        "deltaSyncKb": 83.849609375,
+        "nfsOnlySync": [
+          "static/2404.1b07d7f8.chunk.js",
+          "static/__federation_expose_alpha.a819aa93.chunk.js"
+        ],
+        "ofsOnlySync": [
+          "static/__federation_expose_default_export.24f2deca.chunk.js"
+        ],
+        "alphaOnlySync": [
+          "static/2404.1b07d7f8.chunk.js",
+          "static/__federation_expose_alpha.a819aa93.chunk.js"
+        ]
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-mui4-test/dist/dist/mf-manifest.json",
+      "static": {
+        "hasDefaultExport": true,
+        "alphaEntry": "src/alpha/index.tsx",
+        "nfsEntry": "src/alpha/index.tsx",
+        "highCount": 0,
+        "findings": []
+      }
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-mui5-test",
+      "ws": "theme",
+      "wsRoot": "/Users/dsantra/Documents/rhdh-plugins/workspaces/theme",
+      "external": false,
+      "layout": "classic",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-mui5-test/dist/dist/mf-manifest.json"
+      },
+      "manifest": {
+        "layout": "classic",
+        "exposes": [".", "alpha"],
+        "nfsExposeName": "alpha",
+        "ofsExposeName": ".",
+        "translationsExposeName": "alpha",
+        "nfs": {
+          "name": "alpha",
+          "syncCount": 3,
+          "syncKb": 127.8349609375,
+          "asyncCount": 197,
+          "syncPaths": [
+            "static/4113.5d789432.chunk.js",
+            "static/2404.94ad48c0.chunk.js",
+            "static/__federation_expose_alpha.ad7f8d8f.chunk.js"
+          ]
+        },
+        "ofs": {
+          "name": ".",
+          "syncCount": 2,
+          "syncKb": 43.984375,
+          "asyncCount": 196,
+          "syncPaths": [
+            "static/4113.5d789432.chunk.js",
+            "static/__federation_expose_default_export.b6e9112d.chunk.js"
+          ]
+        },
+        "translations": {
+          "name": "alpha",
+          "syncCount": 3,
+          "syncKb": 127.8349609375,
+          "asyncCount": 197,
+          "syncPaths": [
+            "static/4113.5d789432.chunk.js",
+            "static/2404.94ad48c0.chunk.js",
+            "static/__federation_expose_alpha.ad7f8d8f.chunk.js"
+          ]
+        },
+        "alphaExposeName": "alpha",
+        "alpha": {
+          "name": "alpha",
+          "syncCount": 3,
+          "syncKb": 127.8349609375,
+          "asyncCount": 197,
+          "syncPaths": [
+            "static/4113.5d789432.chunk.js",
+            "static/2404.94ad48c0.chunk.js",
+            "static/__federation_expose_alpha.ad7f8d8f.chunk.js"
+          ]
+        },
+        "deltaSyncCount": 1,
+        "deltaSyncKb": 83.8505859375,
+        "nfsOnlySync": [
+          "static/2404.94ad48c0.chunk.js",
+          "static/__federation_expose_alpha.ad7f8d8f.chunk.js"
+        ],
+        "ofsOnlySync": [
+          "static/__federation_expose_default_export.b6e9112d.chunk.js"
+        ],
+        "alphaOnlySync": [
+          "static/2404.94ad48c0.chunk.js",
+          "static/__federation_expose_alpha.ad7f8d8f.chunk.js"
+        ]
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-mui5-test/dist/dist/mf-manifest.json",
+      "static": {
+        "hasDefaultExport": true,
+        "alphaEntry": "src/alpha/index.tsx",
+        "nfsEntry": "src/alpha/index.tsx",
+        "highCount": 0,
+        "findings": []
+      }
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-orchestrator",
+      "ws": "orchestrator",
+      "wsRoot": "/Users/dsantra/Documents/rhdh-plugins/workspaces/orchestrator",
+      "external": false,
+      "layout": "classic",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-orchestrator/dist/dist/mf-manifest.json"
+      },
+      "manifest": {
+        "layout": "classic",
+        "exposes": [".", "alpha"],
+        "nfsExposeName": "alpha",
+        "ofsExposeName": ".",
+        "translationsExposeName": "alpha",
+        "nfs": {
+          "name": "alpha",
+          "syncCount": 4,
+          "syncKb": 544.4921875,
+          "asyncCount": 205,
+          "syncPaths": [
+            "static/1805.d0fc3ad3.chunk.js",
+            "static/2459.efb852ad.chunk.js",
+            "static/9468.59a28084.chunk.js",
+            "static/__federation_expose_alpha.14061da5.chunk.js"
+          ]
+        },
+        "ofs": {
+          "name": ".",
+          "syncCount": 4,
+          "syncKb": 1597.2392578125,
+          "asyncCount": 199,
+          "syncPaths": [
+            "static/3014.87c7fee3.chunk.js",
+            "static/1805.d0fc3ad3.chunk.js",
+            "static/2459.efb852ad.chunk.js",
+            "static/__federation_expose_default_export.7a0f108d.chunk.js"
+          ]
+        },
+        "translations": {
+          "name": "alpha",
+          "syncCount": 4,
+          "syncKb": 544.4921875,
+          "asyncCount": 205,
+          "syncPaths": [
+            "static/1805.d0fc3ad3.chunk.js",
+            "static/2459.efb852ad.chunk.js",
+            "static/9468.59a28084.chunk.js",
+            "static/__federation_expose_alpha.14061da5.chunk.js"
+          ]
+        },
+        "alphaExposeName": "alpha",
+        "alpha": {
+          "name": "alpha",
+          "syncCount": 4,
+          "syncKb": 544.4921875,
+          "asyncCount": 205,
+          "syncPaths": [
+            "static/1805.d0fc3ad3.chunk.js",
+            "static/2459.efb852ad.chunk.js",
+            "static/9468.59a28084.chunk.js",
+            "static/__federation_expose_alpha.14061da5.chunk.js"
+          ]
+        },
+        "deltaSyncCount": 0,
+        "deltaSyncKb": -1052.7470703125,
+        "nfsOnlySync": [
+          "static/9468.59a28084.chunk.js",
+          "static/__federation_expose_alpha.14061da5.chunk.js"
+        ],
+        "ofsOnlySync": [
+          "static/3014.87c7fee3.chunk.js",
+          "static/__federation_expose_default_export.7a0f108d.chunk.js"
+        ],
+        "alphaOnlySync": [
+          "static/9468.59a28084.chunk.js",
+          "static/__federation_expose_alpha.14061da5.chunk.js"
+        ]
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-orchestrator/dist/dist/mf-manifest.json",
+      "static": {
+        "hasDefaultExport": true,
+        "alphaEntry": "src/alpha.tsx",
+        "nfsEntry": "src/alpha.tsx",
+        "highCount": 1,
+        "findings": [
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/className",
+            "file": "src/alpha.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ./components/OrchestratorIcon",
+            "file": "src/alpha.tsx"
+          }
+        ]
+      }
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-orchestrator-form-widgets",
+      "ws": "orchestrator",
+      "wsRoot": "/Users/dsantra/Documents/rhdh-plugins/workspaces/orchestrator",
+      "external": false,
+      "layout": "classic",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-orchestrator-form-widgets/dist/dist/mf-manifest.json"
+      },
+      "manifest": {
+        "layout": "classic",
+        "exposes": [".", "alpha"],
+        "nfsExposeName": "alpha",
+        "ofsExposeName": ".",
+        "translationsExposeName": "alpha",
+        "nfs": {
+          "name": "alpha",
+          "syncCount": 5,
+          "syncKb": 1006.8173828125,
+          "asyncCount": 192,
+          "syncPaths": [
+            "static/7145.5d36e459.chunk.js",
+            "static/6605.127179df.chunk.js",
+            "static/7419.e6d53fc8.chunk.js",
+            "static/49.2b340115.chunk.js",
+            "static/__federation_expose_alpha.f2f29a8d.chunk.js"
+          ]
+        },
+        "ofs": {
+          "name": ".",
+          "syncCount": 4,
+          "syncKb": 921.28125,
+          "asyncCount": 192,
+          "syncPaths": [
+            "static/7145.5d36e459.chunk.js",
+            "static/6605.127179df.chunk.js",
+            "static/7419.e6d53fc8.chunk.js",
+            "static/__federation_expose_default_export.0e049e29.chunk.js"
+          ]
+        },
+        "translations": {
+          "name": "alpha",
+          "syncCount": 5,
+          "syncKb": 1006.8173828125,
+          "asyncCount": 192,
+          "syncPaths": [
+            "static/7145.5d36e459.chunk.js",
+            "static/6605.127179df.chunk.js",
+            "static/7419.e6d53fc8.chunk.js",
+            "static/49.2b340115.chunk.js",
+            "static/__federation_expose_alpha.f2f29a8d.chunk.js"
+          ]
+        },
+        "alphaExposeName": "alpha",
+        "alpha": {
+          "name": "alpha",
+          "syncCount": 5,
+          "syncKb": 1006.8173828125,
+          "asyncCount": 192,
+          "syncPaths": [
+            "static/7145.5d36e459.chunk.js",
+            "static/6605.127179df.chunk.js",
+            "static/7419.e6d53fc8.chunk.js",
+            "static/49.2b340115.chunk.js",
+            "static/__federation_expose_alpha.f2f29a8d.chunk.js"
+          ]
+        },
+        "deltaSyncCount": 1,
+        "deltaSyncKb": 85.5361328125,
+        "nfsOnlySync": [
+          "static/49.2b340115.chunk.js",
+          "static/__federation_expose_alpha.f2f29a8d.chunk.js"
+        ],
+        "ofsOnlySync": [
+          "static/__federation_expose_default_export.0e049e29.chunk.js"
+        ],
+        "alphaOnlySync": [
+          "static/49.2b340115.chunk.js",
+          "static/__federation_expose_alpha.f2f29a8d.chunk.js"
+        ]
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-orchestrator-form-widgets/dist/dist/mf-manifest.json",
+      "static": {
+        "hasDefaultExport": true,
+        "alphaEntry": "src/alpha.tsx",
+        "nfsEntry": "src/alpha.tsx",
+        "highCount": 0,
+        "findings": []
+      }
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-quickstart",
+      "ws": "quickstart",
+      "wsRoot": "/Users/dsantra/Documents/rhdh-plugins/workspaces/quickstart",
+      "external": false,
+      "layout": "graduated",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-quickstart/dist/dist/mf-manifest.json"
+      },
+      "manifest": {
+        "layout": "graduated",
+        "exposes": [
+          ".",
+          "alpha",
+          "quickstart-init-module",
+          "quickstart-translations-module"
+        ],
+        "nfsExposeName": ".",
+        "ofsExposeName": null,
+        "translationsExposeName": "alpha",
+        "nfs": {
+          "name": ".",
+          "syncCount": 4,
+          "syncKb": 464.84765625,
+          "asyncCount": 6,
+          "syncPaths": [
+            "static/404.7fbcbc37.chunk.js",
+            "static/605.30ac0524.chunk.js",
+            "static/243.e899cd34.chunk.js",
+            "static/__federation_expose_default_export.de82f3ab.chunk.js"
+          ]
+        },
+        "ofs": null,
+        "translations": {
+          "name": "alpha",
+          "syncCount": 4,
+          "syncKb": 464.9912109375,
+          "asyncCount": 6,
+          "syncPaths": [
+            "static/404.7fbcbc37.chunk.js",
+            "static/605.30ac0524.chunk.js",
+            "static/243.e899cd34.chunk.js",
+            "static/__federation_expose_alpha.1abb7401.chunk.js"
+          ]
+        },
+        "alphaExposeName": ".",
+        "alpha": {
+          "name": ".",
+          "syncCount": 4,
+          "syncKb": 464.84765625,
+          "asyncCount": 6,
+          "syncPaths": [
+            "static/404.7fbcbc37.chunk.js",
+            "static/605.30ac0524.chunk.js",
+            "static/243.e899cd34.chunk.js",
+            "static/__federation_expose_default_export.de82f3ab.chunk.js"
+          ]
+        },
+        "deltaSyncCount": null,
+        "deltaSyncKb": null,
+        "nfsOnlySync": [
+          "static/404.7fbcbc37.chunk.js",
+          "static/605.30ac0524.chunk.js",
+          "static/243.e899cd34.chunk.js",
+          "static/__federation_expose_default_export.de82f3ab.chunk.js"
+        ],
+        "ofsOnlySync": [],
+        "alphaOnlySync": [
+          "static/404.7fbcbc37.chunk.js",
+          "static/605.30ac0524.chunk.js",
+          "static/243.e899cd34.chunk.js",
+          "static/__federation_expose_default_export.de82f3ab.chunk.js"
+        ]
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-quickstart/dist/dist/mf-manifest.json",
+      "static": {
+        "hasDefaultExport": true,
+        "alphaEntry": "src/index.tsx",
+        "nfsEntry": "src/index.tsx",
+        "highCount": 17,
+        "findings": [
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ./components/Quickstart",
+            "file": "src/QuickstartDrawerContent.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Snackbar",
+            "file": "src/QuickstartInit.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/Close",
+            "file": "src/QuickstartInit.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/IconButton",
+            "file": "src/QuickstartInit.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Box",
+            "file": "src/components/Quickstart.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Divider",
+            "file": "src/components/Quickstart.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/MenuItem",
+            "file": "src/components/QuickstartButton/QuickstartButton.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Box",
+            "file": "src/components/QuickstartButton/QuickstartButton.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Typography",
+            "file": "src/components/QuickstartButton/QuickstartButton.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/styles",
+            "file": "src/components/QuickstartButton/QuickstartButton.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/WavingHandOutlined",
+            "file": "src/components/QuickstartButton/QuickstartButton.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Box",
+            "file": "src/components/QuickstartContent/QuickstartContent.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/List",
+            "file": "src/components/QuickstartContent/QuickstartContent.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/CircularProgress",
+            "file": "src/components/QuickstartContent/QuickstartContent.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/OpenInNew",
+            "file": "src/components/QuickstartContent/QuickstartCtaLink.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @backstage/core-components",
+            "file": "src/components/QuickstartContent/QuickstartCtaLink.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/ExpandLess",
+            "file": "src/components/QuickstartContent/QuickstartItem.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/ExpandMore",
+            "file": "src/components/QuickstartContent/QuickstartItem.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Box",
+            "file": "src/components/QuickstartContent/QuickstartItem.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Collapse",
+            "file": "src/components/QuickstartContent/QuickstartItem.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/List",
+            "file": "src/components/QuickstartContent/QuickstartItem.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/ListItem",
+            "file": "src/components/QuickstartContent/QuickstartItem.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/ListItemIcon",
+            "file": "src/components/QuickstartContent/QuickstartItem.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/ListItemText",
+            "file": "src/components/QuickstartContent/QuickstartItem.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/IconButton",
+            "file": "src/components/QuickstartContent/QuickstartItem.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Icon",
+            "file": "src/components/QuickstartContent/QuickstartItemIcon.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/AdminPanelSettingsOutlined",
+            "file": "src/components/QuickstartContent/QuickstartItemIcon.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/VpnKeyOutlined",
+            "file": "src/components/QuickstartContent/QuickstartItemIcon.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/FileCopyOutlined",
+            "file": "src/components/QuickstartContent/QuickstartItemIcon.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/PowerOutlined",
+            "file": "src/components/QuickstartContent/QuickstartItemIcon.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/Login",
+            "file": "src/components/QuickstartContent/QuickstartItemIcon.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/CategoryOutlined",
+            "file": "src/components/QuickstartContent/QuickstartItemIcon.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/ControlPointOutlined",
+            "file": "src/components/QuickstartContent/QuickstartItemIcon.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/SchoolOutlined",
+            "file": "src/components/QuickstartContent/QuickstartItemIcon.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/styles",
+            "file": "src/components/QuickstartContent/QuickstartItemIcon.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Box",
+            "file": "src/components/QuickstartContent/QuickstartItemIcon.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-icon-import",
+            "message": "Static icon import: @mui/icons-material/Close",
+            "file": "src/components/QuickstartDrawerProvider.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/IconButton",
+            "file": "src/components/QuickstartDrawerProvider.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Snackbar",
+            "file": "src/components/QuickstartDrawerProvider.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Box",
+            "file": "src/components/QuickstartFooter.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Button",
+            "file": "src/components/QuickstartFooter.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/LinearProgress",
+            "file": "src/components/QuickstartFooter.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Typography",
+            "file": "src/components/QuickstartFooter.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Box",
+            "file": "src/components/QuickstartHeader.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Toolbar",
+            "file": "src/components/QuickstartHeader.tsx"
+          },
+          {
+            "severity": "medium",
+            "rule": "heavy-ui-import",
+            "message": "Heavy UI dependency: @mui/material/Typography",
+            "file": "src/components/QuickstartHeader.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ../components/QuickstartDrawerContext",
+            "file": "src/hooks/useQuickstartDrawerContext.tsx"
+          },
+          {
+            "severity": "high",
+            "rule": "static-component-import",
+            "message": "Static component import: ./components/QuickstartButton/QuickstartButton",
+            "file": "src/plugin.ts"
+          }
+        ]
+      }
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-scorecard",
+      "ws": "scorecard",
+      "wsRoot": "/Users/dsantra/Documents/rhdh-plugins/workspaces/scorecard",
+      "external": false,
+      "layout": "classic",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-scorecard/dist/dist/mf-manifest.json"
+      },
+      "manifest": {
+        "layout": "classic",
+        "exposes": [".", "alpha"],
+        "nfsExposeName": "alpha",
+        "ofsExposeName": ".",
+        "translationsExposeName": "alpha",
+        "nfs": {
+          "name": "alpha",
+          "syncCount": 6,
+          "syncKb": 1041.6474609375,
+          "asyncCount": 214,
+          "syncPaths": [
+            "static/8088.3b73a673.chunk.js",
+            "static/1122.c72dcdca.chunk.js",
+            "static/4033.7dabeeaa.chunk.js",
+            "static/9530.1e20bd17.chunk.js",
+            "static/3239.6704a44e.chunk.js",
+            "static/__federation_expose_alpha.d7492617.chunk.js"
+          ]
+        },
+        "ofs": {
+          "name": ".",
+          "syncCount": 4,
+          "syncKb": 95.150390625,
+          "asyncCount": 214,
+          "syncPaths": [
+            "static/6605.50602445.chunk.js",
+            "static/8074.698b2014.chunk.js",
+            "static/9530.1e20bd17.chunk.js",
+            "static/__federation_expose_default_export.ab177829.chunk.js"
+          ]
+        },
+        "translations": {
+          "name": "alpha",
+          "syncCount": 6,
+          "syncKb": 1041.6474609375,
+          "asyncCount": 214,
+          "syncPaths": [
+            "static/8088.3b73a673.chunk.js",
+            "static/1122.c72dcdca.chunk.js",
+            "static/4033.7dabeeaa.chunk.js",
+            "static/9530.1e20bd17.chunk.js",
+            "static/3239.6704a44e.chunk.js",
+            "static/__federation_expose_alpha.d7492617.chunk.js"
+          ]
+        },
+        "alphaExposeName": "alpha",
+        "alpha": {
+          "name": "alpha",
+          "syncCount": 6,
+          "syncKb": 1041.6474609375,
+          "asyncCount": 214,
+          "syncPaths": [
+            "static/8088.3b73a673.chunk.js",
+            "static/1122.c72dcdca.chunk.js",
+            "static/4033.7dabeeaa.chunk.js",
+            "static/9530.1e20bd17.chunk.js",
+            "static/3239.6704a44e.chunk.js",
+            "static/__federation_expose_alpha.d7492617.chunk.js"
+          ]
+        },
+        "deltaSyncCount": 2,
+        "deltaSyncKb": 946.4970703125,
+        "nfsOnlySync": [
+          "static/8088.3b73a673.chunk.js",
+          "static/1122.c72dcdca.chunk.js",
+          "static/4033.7dabeeaa.chunk.js",
+          "static/3239.6704a44e.chunk.js",
+          "static/__federation_expose_alpha.d7492617.chunk.js"
+        ],
+        "ofsOnlySync": [
+          "static/6605.50602445.chunk.js",
+          "static/8074.698b2014.chunk.js",
+          "static/__federation_expose_default_export.ab177829.chunk.js"
+        ],
+        "alphaOnlySync": [
+          "static/8088.3b73a673.chunk.js",
+          "static/1122.c72dcdca.chunk.js",
+          "static/4033.7dabeeaa.chunk.js",
+          "static/3239.6704a44e.chunk.js",
+          "static/__federation_expose_alpha.d7492617.chunk.js"
+        ]
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-scorecard/dist/dist/mf-manifest.json",
+      "static": {
+        "hasDefaultExport": true,
+        "alphaEntry": "src/alpha/index.tsx",
+        "nfsEntry": "src/alpha/index.tsx",
+        "highCount": 0,
+        "findings": []
+      }
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-theme",
+      "ws": "theme",
+      "wsRoot": "/Users/dsantra/Documents/rhdh-plugins/workspaces/theme",
+      "external": false,
+      "layout": "classic",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-theme/dist/dist/mf-manifest.json"
+      },
+      "manifest": {
+        "layout": "classic",
+        "exposes": [".", "alpha"],
+        "nfsExposeName": "alpha",
+        "ofsExposeName": ".",
+        "translationsExposeName": "alpha",
+        "nfs": {
+          "name": "alpha",
+          "syncCount": 5,
+          "syncKb": 218.7939453125,
+          "asyncCount": 0,
+          "syncPaths": [
+            "static/805.a893d89d.chunk.js",
+            "static/727.549a3518.chunk.js",
+            "static/867.e50c0e56.chunk.js",
+            "static/__federation_expose_alpha.1d72b96d.chunk.js",
+            "static/__federation_expose_alpha.629.e5d80252.css"
+          ]
+        },
+        "ofs": {
+          "name": ".",
+          "syncCount": 4,
+          "syncKb": 143.14453125,
+          "asyncCount": 0,
+          "syncPaths": [
+            "static/805.a893d89d.chunk.js",
+            "static/727.549a3518.chunk.js",
+            "static/__federation_expose_default_export.8248e2fa.chunk.js",
+            "static/__federation_expose_default_export.525.a93692f5.css"
+          ]
+        },
+        "translations": {
+          "name": "alpha",
+          "syncCount": 5,
+          "syncKb": 218.7939453125,
+          "asyncCount": 0,
+          "syncPaths": [
+            "static/805.a893d89d.chunk.js",
+            "static/727.549a3518.chunk.js",
+            "static/867.e50c0e56.chunk.js",
+            "static/__federation_expose_alpha.1d72b96d.chunk.js",
+            "static/__federation_expose_alpha.629.e5d80252.css"
+          ]
+        },
+        "alphaExposeName": "alpha",
+        "alpha": {
+          "name": "alpha",
+          "syncCount": 5,
+          "syncKb": 218.7939453125,
+          "asyncCount": 0,
+          "syncPaths": [
+            "static/805.a893d89d.chunk.js",
+            "static/727.549a3518.chunk.js",
+            "static/867.e50c0e56.chunk.js",
+            "static/__federation_expose_alpha.1d72b96d.chunk.js",
+            "static/__federation_expose_alpha.629.e5d80252.css"
+          ]
+        },
+        "deltaSyncCount": 1,
+        "deltaSyncKb": 75.6494140625,
+        "nfsOnlySync": [
+          "static/867.e50c0e56.chunk.js",
+          "static/__federation_expose_alpha.1d72b96d.chunk.js",
+          "static/__federation_expose_alpha.629.e5d80252.css"
+        ],
+        "ofsOnlySync": [
+          "static/__federation_expose_default_export.8248e2fa.chunk.js",
+          "static/__federation_expose_default_export.525.a93692f5.css"
+        ],
+        "alphaOnlySync": [
+          "static/867.e50c0e56.chunk.js",
+          "static/__federation_expose_alpha.1d72b96d.chunk.js",
+          "static/__federation_expose_alpha.629.e5d80252.css"
+        ]
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-theme/dist/dist/mf-manifest.json",
+      "static": {
+        "hasDefaultExport": true,
+        "alphaEntry": "src/alpha/index.ts",
+        "nfsEntry": "src/alpha/index.ts",
+        "highCount": 0,
+        "findings": []
+      }
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-translations",
+      "ws": "translations",
+      "wsRoot": "/Users/dsantra/Documents/rhdh-plugins/workspaces/translations",
+      "external": false,
+      "layout": "classic",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-translations/dist/dist/mf-manifest.json"
+      },
+      "manifest": {
+        "layout": "classic",
+        "exposes": ["."],
+        "nfsExposeName": null,
+        "ofsExposeName": ".",
+        "translationsExposeName": null,
+        "nfs": null,
+        "ofs": {
+          "name": ".",
+          "syncCount": 2,
+          "syncKb": 85.8525390625,
+          "asyncCount": 197,
+          "syncPaths": [
+            "static/1317.0e32eb2f.chunk.js",
+            "static/__federation_expose_default_export.c1401d45.chunk.js"
+          ]
+        },
+        "translations": null,
+        "alphaExposeName": null,
+        "alpha": null,
+        "deltaSyncCount": null,
+        "deltaSyncKb": null,
+        "nfsOnlySync": [],
+        "ofsOnlySync": [
+          "static/1317.0e32eb2f.chunk.js",
+          "static/__federation_expose_default_export.c1401d45.chunk.js"
+        ],
+        "alphaOnlySync": []
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-translations/dist/dist/mf-manifest.json",
+      "static": {
+        "hasDefaultExport": false,
+        "alphaEntry": "src/alpha.ts",
+        "nfsEntry": "src/alpha.ts",
+        "highCount": 0,
+        "findings": []
+      }
+    }
+  ],
+  "workspaceWarnings": []
+}

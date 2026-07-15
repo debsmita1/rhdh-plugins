@@ -1,0 +1,176 @@
+{
+  "generatedAt": "2026-07-15T13:40:56.694Z",
+  "plugins": [
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-adoption-insights",
+      "ws": "adoption-insights",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-adoption-insights/dist/dist/mf-manifest.json"
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-adoption-insights/dist/dist/mf-manifest.json"
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-analytics-module-adoption-insights",
+      "ws": "adoption-insights",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-analytics-module-adoption-insights/dist/dist/mf-manifest.json"
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-analytics-module-adoption-insights/dist/dist/mf-manifest.json"
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-app-auth",
+      "ws": "app-defaults",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-app-auth/dist/dist/mf-manifest.json"
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-app-auth/dist/dist/mf-manifest.json"
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-app-integrations",
+      "ws": "app-defaults",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-app-integrations/dist/dist/mf-manifest.json"
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-app-integrations/dist/dist/mf-manifest.json"
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-bcc-test",
+      "ws": "theme",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-bcc-test/dist/dist/mf-manifest.json"
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-bcc-test/dist/dist/mf-manifest.json"
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-bui-test",
+      "ws": "theme",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-bui-test/dist/dist/mf-manifest.json"
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-bui-test/dist/dist/mf-manifest.json"
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-bulk-import",
+      "ws": "bulk-import",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-bulk-import/dist/dist/mf-manifest.json"
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-bulk-import/dist/dist/mf-manifest.json"
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-extensions",
+      "ws": "extensions",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-extensions/dist/dist/mf-manifest.json"
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-extensions/dist/dist/mf-manifest.json"
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-global-header",
+      "ws": "global-header",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-global-header/dist/dist/mf-manifest.json"
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-global-header/dist/dist/mf-manifest.json"
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-homepage",
+      "ws": "homepage",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-homepage/dist/dist/mf-manifest.json"
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-homepage/dist/dist/mf-manifest.json"
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-lightspeed",
+      "ws": "lightspeed",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-lightspeed/dist/dist/mf-manifest.json"
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-lightspeed/dist/dist/mf-manifest.json"
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-mui4-test",
+      "ws": "theme",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-mui4-test/dist/dist/mf-manifest.json"
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-mui4-test/dist/dist/mf-manifest.json"
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-mui5-test",
+      "ws": "theme",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-mui5-test/dist/dist/mf-manifest.json"
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-mui5-test/dist/dist/mf-manifest.json"
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-orchestrator",
+      "ws": "orchestrator",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-orchestrator/dist/dist/mf-manifest.json"
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-orchestrator/dist/dist/mf-manifest.json"
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-orchestrator-form-widgets",
+      "ws": "orchestrator",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-orchestrator-form-widgets/dist/dist/mf-manifest.json"
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-orchestrator-form-widgets/dist/dist/mf-manifest.json"
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-quickstart",
+      "ws": "quickstart",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-quickstart/dist/dist/mf-manifest.json"
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-quickstart/dist/dist/mf-manifest.json"
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-scorecard",
+      "ws": "scorecard",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-scorecard/dist/dist/mf-manifest.json"
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-scorecard/dist/dist/mf-manifest.json"
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-theme",
+      "ws": "theme",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-theme/dist/dist/mf-manifest.json"
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-theme/dist/dist/mf-manifest.json"
+    },
+    {
+      "name": "@red-hat-developer-hub/backstage-plugin-translations",
+      "ws": "translations",
+      "bundle": {
+        "status": "ok",
+        "manifest": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-translations/dist/dist/mf-manifest.json"
+      },
+      "manifestPath": "/Users/dsantra/Documents/rhdh-plugins/.mf-sync-report/_red-hat-developer-hub_backstage-plugin-translations/dist/dist/mf-manifest.json"
+    }
+  ]
+}

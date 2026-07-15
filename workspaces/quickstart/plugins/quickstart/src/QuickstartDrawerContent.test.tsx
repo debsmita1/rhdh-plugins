@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import { screen } from '@testing-library/react';
+import { screen, waitFor } from '@testing-library/react';
 import {
   mockApis,
   renderInTestApp,
@@ -87,9 +87,11 @@ describe('QuickstartDrawerContent', () => {
   it('renders quickstart items when drawer is open and user has eligible items', async () => {
     await renderComponent();
 
-    expect(
-      screen.getByText("Let's get you started with Developer Hub"),
-    ).toBeInTheDocument();
+    await waitFor(() => {
+      expect(
+        screen.getByText("Let's get you started with Developer Hub"),
+      ).toBeInTheDocument();
+    });
   });
 
   it('returns null when no quickstart items are configured', async () => {

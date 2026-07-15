@@ -24,9 +24,10 @@ import {
   StylesProvider as StylesProviderV4,
   useTheme,
 } from '@material-ui/core/styles';
-import OpenInNewIcon from '@mui/icons-material/OpenInNew';
 import { StylesProvider } from '@mui/styles';
 import { QueryClientProvider } from '@tanstack/react-query';
+
+import '../lightspeedPatternflyStyles';
 
 import { useAllModels } from '../hooks/useAllModels';
 import { useLightspeedViewPermission } from '../hooks/useLightspeedViewPermission';
@@ -176,7 +177,8 @@ const LightspeedChatContainerInner = () => {
             target="_blank"
             href="https://github.com/redhat-developer/rhdh-plugins/blob/main/workspaces/lightspeed/plugins/lightspeed/README.md#permission-framework-support"
           >
-            {t('common.readMore')} &nbsp; <OpenInNewIcon />
+            {t('common.readMore')} &nbsp;{' '}
+            <span className="material-icons-outlined">open_in_new</span>
           </Button>
         }
       />

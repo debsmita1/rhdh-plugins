@@ -83,3 +83,5 @@ export const homepageTranslationsModule = createFrontendModule({
  * @alpha
  */
 export { homepageTranslationRef, homepageTranslations } from '../translations';
+
+export default homePageModule;

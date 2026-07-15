@@ -20,9 +20,11 @@
  * @packageDocumentation
  */
 
-export { appAuthModule } from './appAuthModule';
+import { appAuthModule } from './appAuthModule';
+
+export { appAuthModule };
 export { SignInPage } from './components/SignInPage';
 export * from './AuthApiRefs';
 export * from './translations/signIn';
 
-export { appAuthModule as default } from './appAuthModule';
+export default appAuthModule;

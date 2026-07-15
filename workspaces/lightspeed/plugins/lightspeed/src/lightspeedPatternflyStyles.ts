@@ -14,7 +14,5 @@
  * limitations under the License.
  */
 
-import lightspeedPlugin from './index';
-
-export default lightspeedPlugin;
-export * from './translations';
+import '@patternfly/react-core/dist/styles/base-no-reset.css';
+import '@patternfly/chatbot/dist/css/main.css';

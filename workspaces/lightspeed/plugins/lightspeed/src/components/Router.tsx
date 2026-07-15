@@ -21,6 +21,8 @@ import { configApiRef, useApi } from '@backstage/core-plugin-api';
 import { StylesProvider as StylesProviderV4 } from '@material-ui/core/styles';
 import { StylesProvider } from '@mui/styles';
 
+import '../lightspeedPatternflyStyles';
+
 import {
   generateClassName,
   generateClassNameV4,

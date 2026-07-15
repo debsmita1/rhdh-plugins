@@ -18,7 +18,6 @@ import { Content, Page } from '@backstage/core-components';
 import { identityApiRef, useApi } from '@backstage/core-plugin-api';
 import Box from '@mui/material/Box';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
-import { AiExperienceStylesProvider } from '../AiExperienceStylesProvider';
 import useGreeting from '../../hooks/useGreeting';
 import { useTranslation } from '../../hooks/useTranslation';
 import LearnSection from '../LearnSection';
@@ -34,9 +33,8 @@ export const AiExperienceHomePage = () => {
   const { value: profile } = useAsync(() => identityApi.getProfileInfo());
 
   return (
-    <AiExperienceStylesProvider>
-      <QueryClientProvider client={new QueryClient()}>
-        <Page themeId="home">
+    <QueryClientProvider client={new QueryClient()}>
+      <Page themeId="home">
           <Content>
             <Box>
               <SectionWrapper
@@ -66,6 +64,5 @@ export const AiExperienceHomePage = () => {
           </Content>
         </Page>
       </QueryClientProvider>
-    </AiExperienceStylesProvider>
   );
 };

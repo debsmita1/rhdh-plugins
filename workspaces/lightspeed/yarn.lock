@@ -9343,6 +9343,7 @@ __metadata:
     "@ianvs/prettier-plugin-sort-imports": "npm:^4.4.0"
     "@langchain/core": "npm:^0.3.80"
     "@langchain/openai": "npm:^0.6.0"
+    "@red-hat-developer-hub/backstage-plugin-lightspeed-backend": "workspace:^"
     "@red-hat-developer-hub/backstage-plugin-lightspeed-common": "workspace:^"
     "@spotify/prettier-config": "npm:^15.0.0"
     "@types/express": "npm:4.17.25"

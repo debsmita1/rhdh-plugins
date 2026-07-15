@@ -14,9 +14,10 @@
  * limitations under the License.
  */
 
+import type { ComponentType } from 'react';
+
 import { HomePageWidgetBlueprint } from '@backstage/plugin-home-react/alpha';
 import type { RendererProps } from '@backstage/plugin-home-react';
-import { ScorecardHomepageCardWithProvider } from '../../components/ScorecardHomepageSection';
 
 const defaultCardLayout = {
   width: {
@@ -31,42 +32,26 @@ const defaultCardLayout = {
   },
 } as const;
 
-function AggregatedCardWithDeprecatedMetricIdContent() {
-  return <ScorecardHomepageCardWithProvider metricId="jira.open_issues" />;
-}
-
-function AggregatedCardWithDefaultAggregationContent() {
-  return <ScorecardHomepageCardWithProvider aggregationId="github.open_prs" />;
-}
-
-function AggregatedCardWithJiraOpenIssuesContent() {
-  return <ScorecardHomepageCardWithProvider aggregationId="openIssuesKpi" />;
-}
-
-function AggregatedCardWithGithubOpenPrsContent() {
-  return <ScorecardHomepageCardWithProvider aggregationId="openPrsKpi" />;
-}
-
-function AggregatedCardWithGithubFilecheckLicenseContent() {
-  return (
-    <ScorecardHomepageCardWithProvider aggregationId="licenseFileExistsKpi" />
-  );
-}
-
-function AggregatedCardWithGithubFilecheckCodeownersContent() {
-  return (
-    <ScorecardHomepageCardWithProvider aggregationId="filecheck.codeowners" />
-  );
-}
-
-function AggregatedCardWithGithubOpenPrsWeightedContent() {
-  return (
-    <ScorecardHomepageCardWithProvider aggregationId="openPrsWeightedKpi" />
-  );
-}
-
 function BorderlessHomeWidgetRenderer({ Content }: RendererProps) {
   return <Content />;
+}
+
+type ScorecardCardProps = {
+  metricId?: string;
+  aggregationId?: string;
+};
+
+function lazyScorecardWidget(
+  render: (
+    ScorecardHomepageCardWithProvider: ComponentType<ScorecardCardProps>,
+  ) => ComponentType,
+) {
+  return async () => {
+    const { ScorecardHomepageCardWithProvider } = await import(
+      '../../components/ScorecardHomepageSection'
+    );
+    return { Content: render(ScorecardHomepageCardWithProvider) };
+  };
 }
 
 /**
@@ -83,10 +68,9 @@ export const aggregatedCardWithDeprecatedMetricIdWidget =
       componentProps: {
         Renderer: BorderlessHomeWidgetRenderer,
       },
-      components: () =>
-        Promise.resolve({
-          Content: AggregatedCardWithDeprecatedMetricIdContent,
-        }),
+      components: lazyScorecardWidget(ScorecardHomepageCardWithProvider => () => (
+        <ScorecardHomepageCardWithProvider metricId="jira.open_issues" />
+      )),
     },
   });
 
@@ -104,10 +88,9 @@ export const aggregatedCardWithDefaultAggregationWidget =
       componentProps: {
         Renderer: BorderlessHomeWidgetRenderer,
       },
-      components: () =>
-        Promise.resolve({
-          Content: AggregatedCardWithDefaultAggregationContent,
-        }),
+      components: lazyScorecardWidget(ScorecardHomepageCardWithProvider => () => (
+        <ScorecardHomepageCardWithProvider aggregationId="github.open_prs" />
+      )),
     },
   });
 
@@ -125,10 +108,9 @@ export const aggregatedCardWithJiraOpenIssuesWidget =
       componentProps: {
         Renderer: BorderlessHomeWidgetRenderer,
       },
-      components: () =>
-        Promise.resolve({
-          Content: AggregatedCardWithJiraOpenIssuesContent,
-        }),
+      components: lazyScorecardWidget(ScorecardHomepageCardWithProvider => () => (
+        <ScorecardHomepageCardWithProvider aggregationId="openIssuesKpi" />
+      )),
     },
   });
 
@@ -146,10 +128,9 @@ export const aggregatedCardWithGithubOpenPrsWidget =
       componentProps: {
         Renderer: BorderlessHomeWidgetRenderer,
       },
-      components: () =>
-        Promise.resolve({
-          Content: AggregatedCardWithGithubOpenPrsContent,
-        }),
+      components: lazyScorecardWidget(ScorecardHomepageCardWithProvider => () => (
+        <ScorecardHomepageCardWithProvider aggregationId="openPrsKpi" />
+      )),
     },
   });
 
@@ -167,10 +148,9 @@ export const aggregatedCardWithGithubFilecheckLicenseWidget =
       componentProps: {
         Renderer: BorderlessHomeWidgetRenderer,
       },
-      components: () =>
-        Promise.resolve({
-          Content: AggregatedCardWithGithubFilecheckLicenseContent,
-        }),
+      components: lazyScorecardWidget(ScorecardHomepageCardWithProvider => () => (
+        <ScorecardHomepageCardWithProvider aggregationId="licenseFileExistsKpi" />
+      )),
     },
   });
 
@@ -188,10 +168,9 @@ export const aggregatedCardWithGithubFilecheckCodeownersWidget =
       componentProps: {
         Renderer: BorderlessHomeWidgetRenderer,
       },
-      components: () =>
-        Promise.resolve({
-          Content: AggregatedCardWithGithubFilecheckCodeownersContent,
-        }),
+      components: lazyScorecardWidget(ScorecardHomepageCardWithProvider => () => (
+        <ScorecardHomepageCardWithProvider aggregationId="filecheck.codeowners" />
+      )),
     },
   });
 
@@ -209,9 +188,8 @@ export const aggregatedCardWithGithubOpenPrsWeightedWidget =
       componentProps: {
         Renderer: BorderlessHomeWidgetRenderer,
       },
-      components: () =>
-        Promise.resolve({
-          Content: AggregatedCardWithGithubOpenPrsWeightedContent,
-        }),
+      components: lazyScorecardWidget(ScorecardHomepageCardWithProvider => () => (
+        <ScorecardHomepageCardWithProvider aggregationId="openPrsWeightedKpi" />
+      )),
     },
   });

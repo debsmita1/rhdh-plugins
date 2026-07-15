@@ -51,3 +51,5 @@ export const rhdhThemeModule = createFrontendModule({
   pluginId: 'app',
   extensions: rhdhThemeExtensions,
 });
+
+export default rhdhThemeModule;

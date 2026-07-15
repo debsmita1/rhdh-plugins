@@ -14,11 +14,13 @@
  * limitations under the License.
  */
 
-import { useMemo } from 'react';
+import { lazy, Suspense, useMemo } from 'react';
 import { configApiRef, useApi } from '@backstage/core-plugin-api';
 import { useAppDrawer } from '@red-hat-developer-hub/backstage-plugin-app-react';
 
-import { Quickstart } from './components/Quickstart';
+const LazyQuickstart = lazy(() =>
+  import('./components/Quickstart').then(m => ({ default: m.Quickstart })),
+);
 import { useQuickstartRole } from './hooks/useQuickstartRole';
 import { QuickstartItemData } from './types';
 import { filterQuickstartItemsByRole } from './utils';
@@ -65,10 +67,12 @@ export const QuickstartDrawerContent = () => {
   }
 
   return (
-    <Quickstart
-      quickstartItems={filteredItems}
-      handleDrawerClose={() => closeDrawer(QUICKSTART_DRAWER_ID)}
-      isLoading={roleLoading}
-    />
+    <Suspense fallback={null}>
+      <LazyQuickstart
+        quickstartItems={filteredItems}
+        handleDrawerClose={() => closeDrawer(QUICKSTART_DRAWER_ID)}
+        isLoading={roleLoading}
+      />
+    </Suspense>
   );
 };

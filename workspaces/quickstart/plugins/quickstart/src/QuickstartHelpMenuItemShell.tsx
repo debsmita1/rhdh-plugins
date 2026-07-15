@@ -14,7 +14,20 @@
  * limitations under the License.
  */
 
-import lightspeedPlugin from './index';
+import { lazy, Suspense } from 'react';
 
-export default lightspeedPlugin;
-export * from './translations';
+const LazyQuickstartHelpMenuItem = lazy(() =>
+  import('./QuickstartHelpMenuItem').then(m => ({
+    default: m.QuickstartHelpMenuItem,
+  })),
+);
+
+export const QuickstartHelpMenuItemShell = ({
+  handleClose,
+}: {
+  handleClose?: () => void;
+}) => (
+  <Suspense fallback={null}>
+    <LazyQuickstartHelpMenuItem handleClose={handleClose} />
+  </Suspense>
+);

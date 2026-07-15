@@ -14,4 +14,7 @@
  * limitations under the License.
  */
 
+import quickstartPlugin from './index';
+
+export default quickstartPlugin;
 export * from './translations';

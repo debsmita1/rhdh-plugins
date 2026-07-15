@@ -15,7 +15,6 @@
  */
 
 import { HomePageLayoutBlueprint } from '@backstage/plugin-home-react/alpha';
-import { HomePageLayout } from '../components/HomePageLayout';
 import { HomePageCardConfig } from '../../types';
 
 /**
@@ -57,8 +56,10 @@ export const homePageLayoutExtension =
       const layoutConfig = config.widgetLayout ?? {};
 
       return originalFactory({
-        loader: async () =>
-          function CustomHomePageLayout({ widgets }) {
+        loader: async () => {
+          const { HomePageLayout } = await import('../components/HomePageLayout');
+
+          return function CustomHomePageLayout({ widgets }) {
             const processedWidgets: HomePageCardConfig[] = widgets
               .map(widget => {
                 const widgetConfig = layoutConfig[widget.name ?? ''];
@@ -85,7 +86,8 @@ export const homePageLayoutExtension =
                 customizable={customizable}
               />
             );
-          },
+          };
+        },
       });
     },
   });

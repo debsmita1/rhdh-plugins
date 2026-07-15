@@ -23,14 +23,11 @@ import {
 import CloseIcon from '@mui/icons-material/Close';
 import IconButton from '@mui/material/IconButton';
 import Snackbar from '@mui/material/Snackbar';
-import { createGenerateClassName, StylesProvider } from '@mui/styles';
 import { QuickstartDrawerContext } from './QuickstartDrawerContext';
 import { QuickstartItemData } from '../types';
 import { filterQuickstartItemsByRole } from '../utils';
 import { useQuickstartRole } from '../hooks/useQuickstartRole';
 import { useTranslation } from '../hooks/useTranslation';
-
-const generateClassName = createGenerateClassName({ seed: 'quickstart' });
 
 /**
  * Provider component for the Quickstart Drawer functionality
@@ -173,8 +170,7 @@ export const QuickstartDrawerProvider = ({ children }: PropsWithChildren) => {
   const handleNotificationClose = () => setShowNotification(false);
 
   return (
-    <StylesProvider generateClassName={generateClassName}>
-      <QuickstartDrawerContext.Provider
+    <QuickstartDrawerContext.Provider
         value={{
           isDrawerOpen,
           openDrawer,
@@ -205,7 +201,6 @@ export const QuickstartDrawerProvider = ({ children }: PropsWithChildren) => {
             </IconButton>
           }
         />
-      </QuickstartDrawerContext.Provider>
-    </StylesProvider>
+    </QuickstartDrawerContext.Provider>
   );
 };

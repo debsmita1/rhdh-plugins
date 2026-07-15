@@ -14,7 +14,16 @@
  * limitations under the License.
  */
 
-import lightspeedPlugin from './index';
+import { lazy, Suspense } from 'react';
 
-export default lightspeedPlugin;
-export * from './translations';
+const LazyQuickstartDrawerContent = lazy(() =>
+  import('./QuickstartDrawerContent').then(m => ({
+    default: m.QuickstartDrawerContent,
+  })),
+);
+
+export const QuickstartDrawerContentShell = () => (
+  <Suspense fallback={null}>
+    <LazyQuickstartDrawerContent />
+  </Suspense>
+);

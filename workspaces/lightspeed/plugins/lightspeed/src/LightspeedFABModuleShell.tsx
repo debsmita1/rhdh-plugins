@@ -14,16 +14,20 @@
  * limitations under the License.
  */
 
-import { PropsWithChildren } from 'react';
+import { lazy, Suspense, type ReactNode } from 'react';
 
-import { createGenerateClassName, StylesProvider } from '@mui/styles';
+const LazyLightspeedFABModuleContent = lazy(() =>
+  import('./LightspeedFABModuleContent').then(m => ({
+    default: m.LightspeedFABModuleContent,
+  })),
+);
 
-const generateClassName = createGenerateClassName({
-  seed: 'homepage',
-});
-
-export const HomePageStylesProvider = ({ children }: PropsWithChildren) => (
-  <StylesProvider generateClassName={generateClassName}>
-    {children}
-  </StylesProvider>
+export const LightspeedFABModuleShell = ({
+  children,
+}: {
+  children?: ReactNode;
+}) => (
+  <Suspense fallback={null}>
+    <LazyLightspeedFABModuleContent>{children}</LazyLightspeedFABModuleContent>
+  </Suspense>
 );

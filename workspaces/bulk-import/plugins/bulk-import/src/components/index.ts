@@ -16,4 +16,5 @@
 
 export { BulkImportPage } from './BulkImportPage';
 export { BulkImportSidebarItem } from './BulkImportSidebarItem';
+export { BulkImportIcon } from './BulkImportIcon';
 export { Router } from './Router';

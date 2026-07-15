@@ -20,8 +20,10 @@
  * @packageDocumentation
  */
 
-export { appIntegrationsModule } from './appIntegrationsModule';
+import { appIntegrationsModule } from './appIntegrationsModule';
+
+export { appIntegrationsModule };
 export { mergeScmAuthFromDeps } from './mergeScmAuthFromDeps';
 export type { ScmAuthFactoryDeps } from './mergeScmAuthFromDeps';
 
-export { appIntegrationsModule as default } from './appIntegrationsModule';
+export default appIntegrationsModule;

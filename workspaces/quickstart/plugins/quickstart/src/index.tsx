@@ -25,15 +25,15 @@ import { GlobalHeaderMenuItemBlueprint } from '@red-hat-developer-hub/backstage-
 
 import { quickstartTranslations } from './translations';
 import { QUICKSTART_DRAWER_ID } from './const';
-import { QuickstartDrawerContent } from './QuickstartDrawerContent';
-import { QuickstartHelpMenuItem } from './QuickstartHelpMenuItem';
+import { QuickstartDrawerContentShell } from './QuickstartDrawerContentShell';
+import { QuickstartHelpMenuItemShell } from './QuickstartHelpMenuItemShell';
 import { QuickstartInit } from './QuickstartInit';
 
 const quickstartDrawer = AppDrawerContentBlueprint.make({
   name: 'quickstart',
   params: {
     id: QUICKSTART_DRAWER_ID,
-    element: <QuickstartDrawerContent />,
+    element: <QuickstartDrawerContentShell />,
     resizable: true,
     defaultWidth: 500,
   },
@@ -43,7 +43,7 @@ const quickstartHelpMenuItem = GlobalHeaderMenuItemBlueprint.make({
   name: 'quickstart',
   params: {
     target: 'help',
-    component: QuickstartHelpMenuItem,
+    component: QuickstartHelpMenuItemShell,
     priority: 50,
   },
 });
@@ -98,4 +98,34 @@ export {
   quickstartTranslations,
 } from './translations';
 
-export * from './legacyExports';
+/**
+ * @public
+ */
+export {
+  quickstartPlugin,
+  QuickstartDrawerProvider,
+  QuickstartDrawerContent,
+  QuickstartDrawerStateExposer,
+  QuickstartButton,
+} from './plugin';
+export type { QuickstartButtonProps } from './plugin';
+
+/**
+ * @public
+ */
+export { useQuickstartDrawerContext } from './hooks/useQuickstartDrawerContext';
+export type { QuickstartDrawerContextType } from './components/QuickstartDrawerContext';
+
+/**
+ * @public
+ */
+export type {
+  UserRole,
+  QuickstartItemData,
+  QuickstartItemCtaData,
+} from './types';
+
+/**
+ * @public
+ */
+export { filterQuickstartItemsByRole } from './utils';

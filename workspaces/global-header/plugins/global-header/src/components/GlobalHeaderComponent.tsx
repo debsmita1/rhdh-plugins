@@ -20,13 +20,7 @@ import { ErrorBoundary } from '@backstage/core-components';
 
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
-import { createGenerateClassName, StylesProvider } from '@mui/styles';
-
 import { GlobalHeaderComponentMountPoint } from '../types';
-
-const generateClassName = createGenerateClassName({
-  seed: 'global-header',
-});
 
 /**
  * Global Header Component properties
@@ -52,8 +46,7 @@ export const GlobalHeaderComponent = ({
   }, [globalHeaderMountPoints]);
 
   return (
-    <StylesProvider generateClassName={generateClassName}>
-      <AppBar position="sticky" component="nav" id="global-header">
+    <AppBar position="sticky" component="nav" id="global-header">
         <Toolbar
           sx={{
             gap: 1,
@@ -72,6 +65,5 @@ export const GlobalHeaderComponent = ({
           ))}
         </Toolbar>
       </AppBar>
-    </StylesProvider>
   );
 };

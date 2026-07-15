@@ -1,0 +1,88 @@
+{
+  "generatedAt": "2026-07-15T14:11:00.000Z",
+  "method": "Secondary legacy-only bundle (exports['.'] temporarily pointed at ./legacy) because backstage-cli package bundle does not yet emit a legacy federation expose.",
+  "plugins": [
+    {
+      "plugin": "@red-hat-developer-hub/backstage-plugin-quickstart",
+      "layout": "graduated",
+      "ofs": {
+        "expose": "legacy (bundled as .)",
+        "syncCount": 3,
+        "syncKb": 170.9,
+        "syncPaths": [
+          "static/805.b5d6e2a7.chunk.js",
+          "static/226.680ea055.chunk.js",
+          "static/__federation_expose_default_export.15eae427.chunk.js"
+        ]
+      },
+      "nfs": {
+        "expose": ".",
+        "syncCount": 4,
+        "syncKb": 464.8,
+        "syncPaths": [
+          "static/404.7fbcbc37.chunk.js",
+          "static/605.30ac0524.chunk.js",
+          "static/243.e899cd34.chunk.js",
+          "static/__federation_expose_default_export.de82f3ab.chunk.js"
+        ]
+      },
+      "translations": {
+        "expose": "alpha",
+        "syncCount": 4,
+        "syncKb": 465.0
+      },
+      "deltaSyncCount": 1,
+      "deltaSyncKb": 293.9,
+      "nfsOnlySync": [
+        "static/404.7fbcbc37.chunk.js",
+        "static/605.30ac0524.chunk.js",
+        "static/243.e899cd34.chunk.js",
+        "static/__federation_expose_default_export.de82f3ab.chunk.js"
+      ],
+      "legacyBundleDir": "/tmp/quickstart-legacy-bundle"
+    },
+    {
+      "plugin": "@red-hat-developer-hub/backstage-plugin-lightspeed",
+      "layout": "graduated",
+      "ofs": {
+        "expose": "legacy (bundled as .)",
+        "syncCount": 6,
+        "syncKb": 3678.2,
+        "syncPaths": [
+          "static/873.5583ab14.chunk.js",
+          "static/9927.78f28859.chunk.js",
+          "static/6605.3c32b5f8.chunk.js",
+          "static/7998.68e25f0a.chunk.js",
+          "static/__federation_expose_default_export.f7151954.chunk.js",
+          "static/7998.7998.394d6f2a.css"
+        ]
+      },
+      "nfs": {
+        "expose": ".",
+        "syncCount": 6,
+        "syncKb": 3773.6,
+        "syncPaths": [
+          "static/873.5583ab14.chunk.js",
+          "static/9927.78f28859.chunk.js",
+          "static/6605.3c32b5f8.chunk.js",
+          "static/7709.3d74caeb.chunk.js",
+          "static/__federation_expose_default_export.836bf385.chunk.js",
+          "static/7709.7709.4c617f2a.css"
+        ]
+      },
+      "translations": {
+        "expose": "alpha",
+        "syncCount": 6,
+        "syncKb": 3773.8
+      },
+      "deltaSyncCount": 0,
+      "deltaSyncKb": 95.4,
+      "nfsOnlySync": [
+        "static/7709.3d74caeb.chunk.js",
+        "static/__federation_expose_default_export.836bf385.chunk.js",
+        "static/7709.7709.4c617f2a.css"
+      ],
+      "legacyBundleDir": "/tmp/lightspeed-legacy-bundle"
+    }
+  ]
+}

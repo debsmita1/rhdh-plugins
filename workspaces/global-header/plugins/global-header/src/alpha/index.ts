@@ -27,7 +27,9 @@ import { globalHeaderTranslations } from '../translations';
 
 // ── Core: plugin + module ──────────────────────────────────────────────
 
-export { default } from './plugin';
+import globalHeaderPlugin from './plugin';
+
+export default globalHeaderPlugin;
 export { globalHeaderModule } from './extensions/globalHeaderModule';
 
 // ── Blueprints: for other plugins to contribute header items ───────────

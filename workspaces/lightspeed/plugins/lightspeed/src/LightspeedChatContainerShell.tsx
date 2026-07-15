@@ -13,17 +13,17 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { PropsWithChildren } from 'react';
-import { createGenerateClassName, StylesProvider } from '@mui/styles';
 
-const generateClassName = createGenerateClassName({
-  seed: 'ai-experience',
-});
+import { lazy, Suspense } from 'react';
 
-export const AiExperienceStylesProvider = ({
-  children,
-}: PropsWithChildren<{}>) => (
-  <StylesProvider generateClassName={generateClassName}>
-    {children}
-  </StylesProvider>
+const LazyLightspeedChatContainer = lazy(() =>
+  import('./components/LightspeedChatContainer').then(m => ({
+    default: m.LightspeedChatContainer,
+  })),
+);
+
+export const LightspeedChatContainerShell = () => (
+  <Suspense fallback={null}>
+    <LazyLightspeedChatContainer />
+  </Suspense>
 );

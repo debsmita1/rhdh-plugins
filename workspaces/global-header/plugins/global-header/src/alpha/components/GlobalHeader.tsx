@@ -19,13 +19,7 @@ import { ErrorBoundary } from '@backstage/core-components';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
-import { createGenerateClassName, StylesProvider } from '@mui/styles';
-
 import { useGlobalHeaderComponents } from '../extensions/GlobalHeaderContext';
-
-const generateClassName = createGenerateClassName({
-  seed: 'global-header',
-});
 
 /**
  * Global header bar. Reads toolbar items from GlobalHeaderContext
@@ -37,8 +31,7 @@ export const GlobalHeader = () => {
   const components = useGlobalHeaderComponents();
 
   return (
-    <StylesProvider generateClassName={generateClassName}>
-      <AppBar
+    <AppBar
         position="sticky"
         component="nav"
         id="global-header"
@@ -65,6 +58,5 @@ export const GlobalHeader = () => {
           ))}
         </Toolbar>
       </AppBar>
-    </StylesProvider>
   );
 };

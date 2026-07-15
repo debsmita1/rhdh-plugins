@@ -14,7 +14,28 @@
  * limitations under the License.
  */
 
-import lightspeedPlugin from './index';
+import { useTheme } from '@mui/material/styles';
 
-export default lightspeedPlugin;
-export * from './translations';
+import { getImageForIconClass } from '../utils/icons';
+
+/**
+ * @public
+ * Bulk Import Icon
+ */
+export const BulkImportIcon = () => {
+  const theme = useTheme();
+  const isDarkTheme = theme.palette.mode === 'dark';
+  const iconClass = isDarkTheme
+    ? 'icon-bulk-import-white'
+    : 'icon-bulk-import-black';
+
+  return (
+    <img
+      src={getImageForIconClass(iconClass)}
+      alt="bulk import icon"
+      style={{ height: '25px' }}
+    />
+  );
+};
+
+export default BulkImportIcon;

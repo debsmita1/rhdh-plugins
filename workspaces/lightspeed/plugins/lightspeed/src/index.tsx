@@ -14,14 +14,6 @@
  * limitations under the License.
  */
 
-import { unstable_ClassNameGenerator as ClassNameGenerator } from '@mui/material/className';
-
-import '@patternfly/react-core/dist/styles/base-no-reset.css';
-import '@patternfly/chatbot/dist/css/main.css';
-
-import { useEffect, type ReactNode } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
-
 import {
   ApiBlueprint,
   configApiRef,
@@ -38,20 +30,18 @@ import {
   TranslationBlueprint,
 } from '@backstage/plugin-app-react';
 
+import { unstable_ClassNameGenerator as ClassNameGenerator } from '@mui/material/className';
+
 import { AppDrawerContentBlueprint } from '@red-hat-developer-hub/backstage-plugin-app-react/alpha';
 
 import { lightspeedApiRef } from './api/api';
 import { LightspeedApiClient } from './api/LightspeedApiClient';
 import { notebooksApiRef } from './api/notebooksApi';
 import { NotebooksApiClient } from './api/NotebooksApiClient';
-import { LightspeedChatContainer as LightspeedChatContainerElement } from './components/LightspeedChatContainer';
-import { LightspeedDrawerProvider as LightspeedProvider } from './components/LightspeedDrawerProvider';
-import { LightspeedFABContent as LightspeedFABComponent } from './components/LightspeedFABContent';
-import {
-  LIGHTSPEED_APP_DRAWER_ID,
-  LIGHTSPEED_LEGACY_PATH,
-  LIGHTSPEED_PATH,
-} from './const';
+import { LIGHTSPEED_APP_DRAWER_ID, LIGHTSPEED_PATH } from './const';
+import { LightspeedChatContainerShell } from './LightspeedChatContainerShell';
+import { LightspeedFABModuleShell } from './LightspeedFABModuleShell';
+import { LightspeedLegacyRedirect } from './LightspeedLegacyRedirect';
 import { lightspeedTranslations } from './translations';
 
 ClassNameGenerator.configure(componentName =>
@@ -109,29 +99,12 @@ const lightspeedDrawer = AppDrawerContentBlueprint.make({
   name: 'lightspeed',
   params: {
     id: LIGHTSPEED_APP_DRAWER_ID,
-    element: <LightspeedChatContainerElement />,
+    element: <LightspeedChatContainerShell />,
     resizable: false,
     defaultWidth: 400,
     priority: 100,
   },
 });
-
-const LightspeedLegacyRedirect = ({ children }: { children: ReactNode }) => {
-  const location = useLocation();
-  const navigate = useNavigate();
-  useEffect(() => {
-    if (location.pathname.startsWith(LIGHTSPEED_LEGACY_PATH)) {
-      const newPath = location.pathname.replace(
-        LIGHTSPEED_LEGACY_PATH,
-        LIGHTSPEED_PATH,
-      );
-      navigate(newPath + location.search + location.hash, {
-        replace: true,
-      });
-    }
-  }, [location, navigate]);
-  return <>{children}</>;
-};
 
 const lightspeedRedirect = AppRootWrapperBlueprint.make({
   name: 'lightspeed-redirect',
@@ -155,12 +128,7 @@ export const lightspeedRedirectModule = createFrontendModule({
 const lightspeedFABExtension = AppRootWrapperBlueprint.make({
   name: 'lightspeed-fab',
   params: {
-    component: ({ children }) => (
-      <LightspeedProvider>
-        <LightspeedFABComponent />
-        {children}
-      </LightspeedProvider>
-    ),
+    component: LightspeedFABModuleShell,
   },
 });
 

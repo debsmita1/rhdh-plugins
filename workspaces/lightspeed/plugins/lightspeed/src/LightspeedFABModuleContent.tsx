@@ -16,18 +16,16 @@
 
 import type { ReactNode } from 'react';
 
-import { createGenerateClassName, StylesProvider } from '@mui/styles';
+import { LightspeedDrawerProvider } from './components/LightspeedDrawerProvider';
+import { LightspeedFABContent } from './components/LightspeedFABContent';
 
-const generateClassName = createGenerateClassName({
-  seed: 'scorecard',
-});
-
-export const ScorecardStylesProvider = ({
+export const LightspeedFABModuleContent = ({
   children,
 }: {
-  readonly children: ReactNode;
+  children?: ReactNode;
 }) => (
-  <StylesProvider generateClassName={generateClassName}>
+  <LightspeedDrawerProvider>
+    <LightspeedFABContent />
     {children}
-  </StylesProvider>
+  </LightspeedDrawerProvider>
 );

@@ -14,15 +14,22 @@
  * limitations under the License.
  */
 
-import { PropsWithChildren } from 'react';
+import { lazy, PropsWithChildren, Suspense } from 'react';
 
 import { makeStyles } from '@mui/styles';
 import { ChatbotModal } from '@patternfly/chatbot';
 
+import '../lightspeedPatternflyStyles';
+
 import { DOCKED_CONTENT_OFFSET } from '../const';
 import { useLightspeedProviderState } from '../hooks/useLightspeedProviderState';
-import { LightspeedChatContainer } from './LightspeedChatContainer';
 import { LightspeedDrawerContext } from './LightspeedDrawerContext';
+
+const LazyLightspeedChatContainer = lazy(() =>
+  import('./LightspeedChatContainer').then(m => ({
+    default: m.LightspeedChatContainer,
+  })),
+);
 
 const useStyles = makeStyles(theme => ({
   chatbotModal: {
@@ -60,7 +67,9 @@ export const LightspeedDrawerProvider = ({ children }: PropsWithChildren) => {
           aria-labelledby="lightspeed-chatpopup-modal"
           className={classes.chatbotModal}
         >
-          <LightspeedChatContainer />
+          <Suspense fallback={null}>
+            <LazyLightspeedChatContainer />
+          </Suspense>
         </ChatbotModal>
       )}
     </LightspeedDrawerContext.Provider>

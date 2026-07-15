@@ -14,37 +14,39 @@
  * limitations under the License.
  */
 
-import MuiIcon from '@mui/material/Icon';
-import AdminPanelSettingsOutlinedIcon from '@mui/icons-material/AdminPanelSettingsOutlined';
-import VpnKeyOutlinedIcon from '@mui/icons-material/VpnKeyOutlined';
-import FileCopyOutlinedIcon from '@mui/icons-material/FileCopyOutlined';
-import PowerOutlinedIcon from '@mui/icons-material/PowerOutlined';
-import LoginIcon from '@mui/icons-material/Login';
-import CategoryOutlinedIcon from '@mui/icons-material/CategoryOutlined';
-import ControlPointOutlinedIcon from '@mui/icons-material/ControlPointOutlined';
-import SchoolOutlinedIcon from '@mui/icons-material/SchoolOutlined';
-import { SxProps, Theme } from '@mui/material/styles';
+import type { CSSProperties } from 'react';
 import { useApp } from '@backstage/core-plugin-api';
-import Box from '@mui/material/Box';
+
 import { LightspeedIcon } from './LightspeedIcon';
 
 export interface QuickstartItemIconProps {
   icon?: string;
-  sx?: SxProps<Theme>;
+  sx?: CSSProperties;
 }
 
-const commonIcons: {
-  [k: string]: React.ReactNode;
-} = {
-  Admin: <AdminPanelSettingsOutlinedIcon />,
-  Rbac: <VpnKeyOutlinedIcon />,
-  Git: <FileCopyOutlinedIcon />,
-  Plugins: <PowerOutlinedIcon />,
-  Import: <LoginIcon />,
-  Catalog: <CategoryOutlinedIcon />,
-  SelfService: <ControlPointOutlinedIcon />,
-  Learning: <SchoolOutlinedIcon />,
-  Lightspeed: <LightspeedIcon />,
+const commonIcons: Record<string, string> = {
+  Admin: 'admin_panel_settings',
+  Rbac: 'vpn_key',
+  Git: 'content_copy',
+  Plugins: 'power_settings_new',
+  Import: 'login',
+  Catalog: 'category',
+  SelfService: 'control_point',
+  Learning: 'school',
+};
+
+const iconWrapperStyle: CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+};
+
+const imageIconStyle: CSSProperties = {
+  display: 'inline-flex',
+  alignItems: 'center',
+  justifyContent: 'center',
+  width: 24,
+  height: 24,
 };
 
 export const QuickstartItemIcon = ({ icon, sx }: QuickstartItemIconProps) => {
@@ -56,18 +58,18 @@ export const QuickstartItemIcon = ({ icon, sx }: QuickstartItemIconProps) => {
   const SystemIcon = app.getSystemIcon(icon);
   if (SystemIcon) {
     return (
-      <Box sx={{ display: 'flex', alignItems: 'center', ...sx }}>
+      <div style={{ ...iconWrapperStyle, ...sx }}>
         <SystemIcon fontSize="medium" />
-      </Box>
+      </div>
     );
   }
 
   if (icon.startsWith('<svg')) {
     const svgDataUri = `data:image/svg+xml;base64,${btoa(icon)}`;
     return (
-      <MuiIcon fontSize="medium" sx={sx}>
-        <img src={svgDataUri} alt="" />
-      </MuiIcon>
+      <div style={{ ...imageIconStyle, ...sx }}>
+        <img src={svgDataUri} alt="" height="100%" width="100%" />
+      </div>
     );
   }
 
@@ -78,19 +80,28 @@ export const QuickstartItemIcon = ({ icon, sx }: QuickstartItemIconProps) => {
     icon.startsWith('data:image/')
   ) {
     return (
-      <MuiIcon
-        fontSize="medium"
-        baseClassName="material-icons-outlined"
-        sx={sx}
-      >
+      <div style={{ ...imageIconStyle, ...sx }}>
         <img src={icon} alt="" height="100%" width="100%" />
-      </MuiIcon>
+      </div>
     );
   }
 
+  if (icon === 'Lightspeed') {
+    return (
+      <div style={{ ...iconWrapperStyle, ...sx }}>
+        <LightspeedIcon />
+      </div>
+    );
+  }
+
+  const materialIcon = commonIcons[icon] ?? icon;
+
   return (
-    <MuiIcon fontSize="medium" baseClassName="material-icons-outlined" sx={sx}>
-      {commonIcons[icon] || icon}
-    </MuiIcon>
+    <div
+      className="material-icons-outlined"
+      style={{ ...iconWrapperStyle, ...sx }}
+    >
+      {materialIcon}
+    </div>
   );
 };
