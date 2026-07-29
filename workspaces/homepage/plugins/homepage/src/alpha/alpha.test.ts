@@ -14,13 +14,17 @@
  * limitations under the License.
  */
 
+import homePlugin from '@backstage/plugin-home/alpha';
 import homepageAlpha, {
+  homepageHomeModule,
+  homepagePlugin,
   homepageTranslationsModule,
   homePageModule,
   homePagePlugin,
 } from '.';
 import { homepageTranslationRef, homepageTranslations } from '../translations';
 import { homePageLayoutExtension } from './extensions/homePageLayoutExtension';
+import { HOMEPAGE_PAGE_ID } from './extensions/homepageAttach';
 import {
   onboardingSectionWidget,
   entitySectionWidget,
@@ -36,19 +40,93 @@ import {
 } from './extensions/homePageCards';
 import { quickAccessApi } from './extensions/apis';
 
+type ExtensionAttach = { id: string; input: string };
+
+type RuntimeExtension = {
+  id: string;
+  attachTo?: ExtensionAttach;
+};
+
+/** Runtime-only: public NFS types do not expose `.extensions`. */
+function getRuntimeExtensions(feature: object): RuntimeExtension[] {
+  const extensions = (feature as { extensions?: RuntimeExtension[] })
+    .extensions;
+  expect(extensions).toBeDefined();
+  return extensions!;
+}
+
+function getAttachTo(extension: RuntimeExtension): ExtensionAttach {
+  expect(extension.attachTo).toBeDefined();
+  return extension.attachTo!;
+}
+
 describe('Dynamic Home Page plugin Alpha (NFS)', () => {
-  describe('Modules', () => {
-    it('should export homePagePlugin with correct structure', () => {
-      expect(homePagePlugin).toBeDefined();
-      expect(homePagePlugin.$$type).toBe('@backstage/FrontendPlugin');
-      expect(homePagePlugin.id).toBe('home');
-      expect(homepageAlpha).toBe(homePagePlugin);
+  describe('Install models', () => {
+    it('homepagePlugin owns page:homepage with widgets attached to it', () => {
+      expect(homepagePlugin).toBeDefined();
+      expect(homepagePlugin.$$type).toBe('@backstage/FrontendPlugin');
+      expect(homepagePlugin.id).toBe('homepage');
+      expect(homepagePlugin.id).not.toBe(homePlugin.id);
+      expect(homepageAlpha).toBe(homepagePlugin);
+      expect(homePagePlugin).toBe(homepagePlugin);
+      expect(homepagePlugin.getExtension(HOMEPAGE_PAGE_ID)).toBeDefined();
+      expect(
+        homepagePlugin.getExtension(
+          'home-page-widget:homepage/rhdh-onboarding-section',
+        ),
+      ).toBeDefined();
+      expect(
+        homepagePlugin.getExtension(
+          'home-page-layout:homepage/dynamic-homepage-layout',
+        ),
+      ).toBeDefined();
+      expect(
+        getRuntimeExtensions(homepagePlugin).some(
+          ext => ext.id === 'page:home',
+        ),
+      ).toBe(false);
     });
 
-    it('should export homePageModule with correct structure', () => {
-      expect(homePageModule).toBeDefined();
-      expect(homePageModule.$$type).toBe('@backstage/FrontendModule');
-      expect(homePageModule.pluginId).toBe('home');
+    it('homepageHomeModule only overrides community home widgets', () => {
+      expect(homepageHomeModule).toBeDefined();
+      expect(homepageHomeModule.$$type).toBe('@backstage/FrontendModule');
+      expect(homepageHomeModule.pluginId).toBe('home');
+      expect(homePageModule).toBe(homepageHomeModule);
+
+      const ids = getRuntimeExtensions(homepageHomeModule).map(ext => ext.id);
+      expect(ids).toEqual(
+        expect.arrayContaining([
+          'home-page-widget:home/starred-entities',
+          'home-page-widget:home/toolkit',
+          'home-page-widget:home/random-joke',
+        ]),
+      );
+      expect(ids).not.toContain(
+        'home-page-widget:homepage/rhdh-onboarding-section',
+      );
+    });
+
+    it('homepage widgets and layout attach to page:homepage', () => {
+      const homepageWidgets = getRuntimeExtensions(homepagePlugin).filter(ext =>
+        ext.id.startsWith('home-page-widget:'),
+      );
+      expect(homepageWidgets.length).toBeGreaterThan(0);
+
+      for (const ext of homepageWidgets) {
+        expect(getAttachTo(ext)).toEqual({
+          id: HOMEPAGE_PAGE_ID,
+          input: 'widgets',
+        });
+      }
+
+      const layout = getRuntimeExtensions(homepagePlugin).find(ext =>
+        ext.id.startsWith('home-page-layout:'),
+      );
+      expect(layout).toBeDefined();
+      expect(getAttachTo(layout!)).toEqual({
+        id: HOMEPAGE_PAGE_ID,
+        input: 'layout',
+      });
     });
 
     it('should export homepageTranslationsModule with correct structure', () => {

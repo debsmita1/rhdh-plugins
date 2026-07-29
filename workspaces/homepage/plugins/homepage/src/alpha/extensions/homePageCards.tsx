@@ -18,6 +18,7 @@ import { HomePageWidgetBlueprint } from '@backstage/plugin-home-react/alpha';
 import homePlugin from '@backstage/plugin-home/alpha';
 import { compatWrapper } from '@backstage/core-compat-api';
 import { createTranslatedCardRenderer } from '../../utils/translatedCardRenderer';
+import { homepageWidgetAttachTo } from './homepageAttach';
 
 /**
  * NFS homepage widgets.
@@ -49,6 +50,7 @@ const defaultCardLayout = {
  * @alpha
  */
 export const onboardingSectionWidget = HomePageWidgetBlueprint.make({
+  attachTo: homepageWidgetAttachTo,
   name: 'rhdh-onboarding-section',
   params: {
     name: 'Red Hat Developer Hub - Onboarding',
@@ -67,6 +69,7 @@ export const onboardingSectionWidget = HomePageWidgetBlueprint.make({
  * @alpha
  */
 export const entitySectionWidget = HomePageWidgetBlueprint.make({
+  attachTo: homepageWidgetAttachTo,
   name: 'rhdh-entity-section',
   params: {
     name: 'Red Hat Developer Hub - Software Catalog',
@@ -86,6 +89,7 @@ export const entitySectionWidget = HomePageWidgetBlueprint.make({
  * @alpha
  */
 export const templateSectionWidget = HomePageWidgetBlueprint.make({
+  attachTo: homepageWidgetAttachTo,
   name: 'rhdh-template-section',
   params: {
     name: 'Red Hat Developer Hub - Explore templates',
@@ -103,7 +107,8 @@ export const templateSectionWidget = HomePageWidgetBlueprint.make({
  * @alpha
  */
 export const quickAccessCardWidget = HomePageWidgetBlueprint.make({
-  name: 'quick-access-card',
+  attachTo: homepageWidgetAttachTo,
+  name: 'quickaccess-card',
   params: {
     name: 'Quick Access Card',
     title: 'Quick Access',
@@ -123,6 +128,7 @@ export const quickAccessCardWidget = HomePageWidgetBlueprint.make({
  * @alpha
  */
 export const searchBarWidget = HomePageWidgetBlueprint.make({
+  attachTo: homepageWidgetAttachTo,
   name: 'search-bar',
   params: {
     name: 'Search',
@@ -159,6 +165,7 @@ const upstreamHomeCardRenderer = ({
  * @alpha
  */
 export const featuredDocsCardWidget = HomePageWidgetBlueprint.make({
+  attachTo: homepageWidgetAttachTo,
   name: 'featured-docs-card',
   params: {
     name: 'Featured docs',
@@ -176,20 +183,31 @@ export const featuredDocsCardWidget = HomePageWidgetBlueprint.make({
  * NFS widget: CatalogStarred (migrated from mountPoint home.page/cards).
  * @alpha
  */
-export const catalogStarredWidget = homePlugin
+export const catalogStarredWidget = HomePageWidgetBlueprint.make({
+  attachTo: homepageWidgetAttachTo,
+  name: 'catalog-starred-entities-card',
+  params: {
+    name: 'Catalog starred',
+    title: 'Starred Catalog Entities',
+    layout: defaultCardLayout,
+    components: () =>
+      import('../../components/legacy/TranslatedUpstreamHomePageCards').then(
+        m => ({
+          Content: m.CatalogStarredEntitiesCard,
+          Renderer: upstreamHomeCardRenderer,
+        }),
+      ),
+  },
+});
+
+/**
+ * Optional override of community home starred when both plugins are installed.
+ * @alpha
+ */
+export const overrideHomeCatalogStarredWidget = homePlugin
   .getExtension('home-page-widget:home/starred-entities')
   .override({
-    params: {
-      name: 'Catalog starred',
-      title: 'Starred Catalog Entities',
-      components: () =>
-        import('../../components/legacy/TranslatedUpstreamHomePageCards').then(
-          m => ({
-            Content: m.CatalogStarredEntitiesCard,
-            Renderer: upstreamHomeCardRenderer,
-          }),
-        ),
-    },
+    disabled: true,
   });
 
 /**
@@ -217,7 +235,8 @@ export const disableRandomJoke = homePlugin
  * @alpha
  */
 export const RecentlyVisitedWidget = HomePageWidgetBlueprint.make({
-  name: 'recently-visited',
+  attachTo: homepageWidgetAttachTo,
+  name: 'recently-visited-card',
   params: {
     layout: defaultCardLayout,
     name: 'Recently visited',
@@ -238,7 +257,8 @@ export const RecentlyVisitedWidget = HomePageWidgetBlueprint.make({
  * @alpha
  */
 export const TopVisitedWidget = HomePageWidgetBlueprint.make({
-  name: 'top-visited',
+  attachTo: homepageWidgetAttachTo,
+  name: 'top-visited-card',
   params: {
     layout: defaultCardLayout,
     name: 'Top visited',

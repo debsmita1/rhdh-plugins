@@ -15,8 +15,10 @@
  */
 
 import { TranslationBlueprint } from '@backstage/plugin-app-react';
-import { createFrontendModule } from '@backstage/frontend-plugin-api';
-import homePlugin from '@backstage/plugin-home/alpha';
+import {
+  createFrontendModule,
+  createFrontendPlugin,
+} from '@backstage/frontend-plugin-api';
 import {
   catalogStarredWidget,
   disableRandomJoke,
@@ -24,6 +26,7 @@ import {
   entitySectionWidget,
   featuredDocsCardWidget,
   onboardingSectionWidget,
+  overrideHomeCatalogStarredWidget,
   quickAccessCardWidget,
   RecentlyVisitedWidget,
   searchBarWidget,
@@ -33,15 +36,17 @@ import {
 import { homepageTranslations } from '../translations';
 
 import { homePageLayoutExtension } from './extensions/homePageLayoutExtension';
+import { homepagePage, homepageRouteRef } from './extensions/homepagePage';
 import { defaultWidgetsApi, quickAccessApi } from './extensions/apis';
 
 /**
- * Homepage extensions layered onto `@backstage/plugin-home`.
+ * Extensions owned by the homepage plugin.
  *
- * Shared by {@link homePagePlugin} (preferred for dynamic installs)
- * and {@link homePageModule} (for apps that already register `homePlugin`).
+ * Widgets/layout attach to `page:homepage` (this plugin's page), so the
+ * homepage works without community `@backstage/plugin-home`.
  */
-const homePageExtensions = [
+const homepageExtensions = [
+  homepagePage,
   homePageLayoutExtension,
   onboardingSectionWidget,
   entitySectionWidget,
@@ -54,40 +59,51 @@ const homePageExtensions = [
   TopVisitedWidget,
   RecentlyVisitedWidget,
   catalogStarredWidget,
-  disableToolkit,
-  disableRandomJoke,
 ];
 
 /**
- * Upstream home plugin with custom layout and widgets applied.
+ * Homepage frontend plugin (`pluginId: homepage`).
  *
- * Use this as the single NFS feature when the host app does not already
- * register `@backstage/plugin-home` (e.g. dynamic plugin installs).
- * The Module Federation alpha default export is this plugin so
- * `dynamicFrontendFeaturesLoader` registers `page:home`.
+ * Provides its own configurable page (`page:homepage`, default path `/`) plus
+ * widgets/layout. Install without community home, or alongside it and disable
+ * one of the pages via app-config (`page:home: false` / `page:homepage: false`).
  *
  * @alpha
  */
-export const homePagePlugin = homePlugin.withOverrides({
-  extensions: homePageExtensions,
+export const homepagePlugin = createFrontendPlugin({
+  pluginId: 'homepage',
+  extensions: homepageExtensions,
+  routes: {
+    root: homepageRouteRef,
+  },
 });
 
 /**
- * Frontend module for the Dynamic Home Page plugin (New Frontend System).
- *
- * Extends the `home` plugin with a custom layout and widgets: Onboarding,
- * Entity Catalog, Templates, Quick Access, Search, Recently Visited, Top Visited, etc.
- *
- * Prefer {@link homePagePlugin} when the host does not already load
- * `@backstage/plugin-home`. Keep using this module only if `homePlugin` is
- * already in `createApp({ features })` or discovered via `app.packages`.
+ * Optional module that mutates community `home` extensions when both plugins
+ * are installed (disable toolkit/joke/community starred).
  *
  * @alpha
  */
-export const homePageModule = createFrontendModule({
-  pluginId: 'home', // upstream home!
-  extensions: homePageExtensions,
+export const homepageHomeModule = createFrontendModule({
+  pluginId: 'home',
+  extensions: [
+    overrideHomeCatalogStarredWidget,
+    disableToolkit,
+    disableRandomJoke,
+  ],
 });
+
+/**
+ * @alpha
+ * @deprecated Use {@link homepageHomeModule}.
+ */
+export { homepageHomeModule as homePageModule };
+
+/**
+ * @alpha
+ * @deprecated Use {@link homepagePlugin}.
+ */
+export { homepagePlugin as homePagePlugin };
 
 /**
  * Translation module for the Dynamic Home Page plugin.
@@ -112,11 +128,13 @@ export const homepageTranslationsModule = createFrontendModule({
  */
 export { homepageTranslationRef, homepageTranslations } from '../translations';
 
+export { homepageRouteRef } from './extensions/homepagePage';
+
 /**
- * Default export required for Module Federation to emit the `alpha` NFS expose.
- * Must be a FrontendPlugin so that the Backstage instance registers `page:home` without a
- * separate `@backstage/plugin-home` install.
+ * Default export for Module Federation `alpha` NFS expose.
+ *
+ * Registers `page:homepage` (configurable path). Community home is optional.
  *
  * @alpha
  */
-export default homePagePlugin;
+export default homepagePlugin;
