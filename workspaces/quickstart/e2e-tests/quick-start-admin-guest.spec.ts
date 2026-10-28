@@ -112,7 +112,7 @@ test.describe('Test Quick Start plugin', () => {
     await configureGitCta.waitFor({ state: 'visible' });
     const href = await configureGitCta.getAttribute('href');
     expect(href).toContain(
-      'https://docs.redhat.com/en/documentation/red_hat_developer_hub/latest/html/integrating_red_hat_developer_hub_with_github/',
+      'https://docs.redhat.com/en/documentation/red_hat_developer_hub/latest/html/integrating_red_hat_developer_hub_with_your_git_provider/',
     );
 
     const lightspeedDocsUrl =
